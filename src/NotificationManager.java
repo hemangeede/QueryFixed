@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 import javax.swing.JFrame;
@@ -106,47 +107,74 @@ public class NotificationManager {
     	}
     	return s;
     }
+        public void  writeCsv(int i)
+    {
+        //int qId,String answer, int uId, int rId, int aId,int rAnsId
+        FileWriter fw;
+        BufferedWriter bw;
+        PrintWriter pw;
+        try
+        {
+            fw=new FileWriter("notification.csv", true);
+            bw= new BufferedWriter(fw);
+            pw= new PrintWriter(bw);
+            
+            //for(Answers an: ans)
+            //for(int i=length;i<ans.size();i++)
+            //{
+                //pw.println(an.getQId()+","+an.getAnswer()+","+an.getUserId()+","+an.getRId()
+                  //      + ","+an.getAId()+","+an.getrAnsId());
+                 pw.println(notifications.get(i).getnotId()+","+notifications.get(i).getNotification()+"," +notifications.get(i).getUId()+","+notifications.get(i).getQuestionId()+","+notifications.get(i).getAnswerId());
+            //}
+            pw.flush();
+            pw.close();
+        }
+        catch (Exception E) {
+  System.out.println(E);
+}
+    } 
+
 	
-	public void writeInFile(List<Notifications> noti) {
-		//BufferedWriter bw = null;
-		FileWriter csvWriter;
-	    try {
-	    	csvWriter = new FileWriter("notification.csv");
-
-	  		for (Notifications n : noti) {
-	  		    //csvWriter.append(String.join(",", rowData));
-	  			csvWriter.append(Integer.toString(n.getnotId()));
-		  		csvWriter.append(",");
-		  		csvWriter.append(n.getNotification());
-		  		csvWriter.append(",");
-		  		csvWriter.append(Integer.toString(n.getUId()));
-		  		csvWriter.append(",");
-		  		csvWriter.append(Integer.toString(n.getQuestionId()));
-		  		csvWriter.append(",");
-		  		csvWriter.append(Integer.toString(n.getAnswerId()));
-		  		csvWriter.append("\n");
-
-	  		}
-
-	  		csvWriter.flush();
-	  		csvWriter.close();
-
-	    } 
-	    catch (IOException ioe) {
-		   ioe.printStackTrace();
-		}
-		finally
-		{ 
-		   try{
-		      //if(csvWriter!=null)
-		    	//  csvWriter.close();
-		   }catch(Exception ex){
-		       System.out.println("Error in closing the BufferedWriter"+ex);
-		    }
-		}
-		//int notId,String notification, int userId, int questionId, int answerId
-			}
-	
+//	public void writeInFile(List<Notifications> noti) {
+//		//BufferedWriter bw = null;
+//		FileWriter csvWriter;
+//	    try {
+//	    	csvWriter = new FileWriter("notification.csv");
+//
+//	  		for (Notifications n : noti) {
+//	  		    //csvWriter.append(String.join(",", rowData));
+//	  			csvWriter.append(Integer.toString(n.getnotId()));
+//		  		csvWriter.append(",");
+//		  		csvWriter.append(n.getNotification());
+//		  		csvWriter.append(",");
+//		  		csvWriter.append(Integer.toString(n.getUId()));
+//		  		csvWriter.append(",");
+//		  		csvWriter.append(Integer.toString(n.getQuestionId()));
+//		  		csvWriter.append(",");
+//		  		csvWriter.append(Integer.toString(n.getAnswerId()));
+//		  		csvWriter.append("\n");
+//
+//	  		}
+//
+//	  		csvWriter.flush();
+//	  		csvWriter.close();
+//
+//	    } 
+//	    catch (IOException ioe) {
+//		   ioe.printStackTrace();
+//		}
+//		finally
+//		{ 
+//		   try{
+//		      //if(csvWriter!=null)
+//		    	//  csvWriter.close();
+//		   }catch(Exception ex){
+//		       System.out.println("Error in closing the BufferedWriter"+ex);
+//		    }
+//		}
+//		//int notId,String notification, int userId, int questionId, int answerId
+//			}
+//	
 	
 	//****Has to look over fetching question from user
 	public String genNotification(NotificationManager n, int qid) {
@@ -157,7 +185,7 @@ public class NotificationManager {
 		Notifications n1 = new Notifications(count, s, uid, qid, -1);
 		notifications.add(n1);
 		count++;
-		writeInFile(notifications);
+		writeCsv(count-1);
 		return s;
 	}
 	public void displayNotification() {

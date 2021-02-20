@@ -185,7 +185,8 @@ public class AnswerQuestion extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setText("How to optimize the Matrix Multiplication?");
+        //jLabel10.setText("How to optimize the Matrix Multiplication?");
+        jLabel10.setText(m.qf.questionmgr.ques.get(m.quesIndex).getQuestion());
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("User Deepak737313: You can use Matrix Chain Multiplicatipon or Strassen Algorithm");

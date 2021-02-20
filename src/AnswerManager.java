@@ -12,6 +12,7 @@ public class AnswerManager {
     public List<Answers> ans;
     static int count=0;
     int length=0;
+    public int quesIndex;
     public AnswerManager(){
         ans=new ArrayList<Answers> ();
     }

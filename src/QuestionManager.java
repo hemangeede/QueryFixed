@@ -103,8 +103,13 @@ public class QuestionManager {
     public List<Questions> getQuestions(){
         return this.ques;
     }
-    public String toString(){
-        return ques.get(0).getQuestion();
+    public String[] QuestionString(){
+        String[] s=new String[ques.size()+1];
+        s[0]="Choose the question you want to answer:";
+        for(int i=0;i<ques.size();i++){
+            s[i+1]=ques.get(i).getQuestion();
+        }
+        return s;
         
     }
     /*public static void main(String[] args){

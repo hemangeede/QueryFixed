@@ -10,6 +10,7 @@ public class DisplayManager {
 	public SignUp signup;
 	public Login login;
 	public Dashboard dashboard;
+        public DisplayQuestions dq;
 	public int userLogId;
         
 	public Notification notification;
@@ -20,6 +21,7 @@ public class DisplayManager {
     }
 	public void showLogin()
 	{
+                dq.setVisible(false);
 		notification.setVisible(false);
 		dashboard.setVisible(false);
 		reviewans.setVisible(false);
@@ -31,7 +33,8 @@ public class DisplayManager {
 	}
 	public void showSignUp()
 	{
-		notification.setVisible(false);
+                dq.setVisible(false);	
+                notification.setVisible(false);
 		dashboard.setVisible(false);
 		login.setVisible(false);
 		askaquestion.setVisible(false);
@@ -41,6 +44,7 @@ public class DisplayManager {
 	}
 	public void showAnswer()
 	{
+                dq.setVisible(false);
 		dashboard.setVisible(false);
 		askaquestion.setVisible(false);
 		signup.setVisible(false);
@@ -50,6 +54,7 @@ public class DisplayManager {
 	}
 	public void showAskaQuestion()
 	{
+                dq.setVisible(false);
 		notification.setVisible(false);
 		signup.setVisible(false);
 		login.setVisible(false);
@@ -68,12 +73,27 @@ public class DisplayManager {
 		reviewans.setVisible(false);
 		dashboard.setVisible(false);
 		askaquestion.setVisible(false);
+		ansques.setVisible(false);
+                dq.setVisible(true);
+		
+	}
+        public void answer()
+	{
+		notification.setVisible(false);
+		signup.setVisible(false);
+		login.setVisible(false);
+		reviewans.setVisible(false);
+		dashboard.setVisible(false);
+		askaquestion.setVisible(false);
+                dq.setVisible(true);
 		ansques.setVisible(true);
+                
 		
 	}
 	public void showDashboard()
 	{
-		notification.setVisible(false);
+		dq.setVisible(false);
+                notification.setVisible(false);
 		signup.setVisible(false);
 		login.setVisible(false);
 		reviewans.setVisible(false);
@@ -85,7 +105,8 @@ public class DisplayManager {
 	
 	public void showNotification()
 	{
-		signup.setVisible(false);
+		dq.setVisible(false);
+                signup.setVisible(false);
 		login.setVisible(false);
 		reviewans.setVisible(false);
 		askaquestion.setVisible(false);
