@@ -9,8 +9,12 @@ public class AnswerQuestion extends javax.swing.JFrame {
      * Creates new form AnswerQuestion
      */
     private AnswerManager m;
-    public AnswerQuestion(AnswerManager m) {
+    public int n;
+    public String question="";
+    public AnswerQuestion(AnswerManager m,int n) {
         this.m=m;
+        this.n=n;
+        //System.out.println(m.qf.dispmgr.quesIndex);
         initComponents();
     }
     
@@ -185,11 +189,15 @@ public class AnswerQuestion extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        //jLabel10.setText("How to optimize the Matrix Multiplication?");
-        jLabel10.setText(m.qf.questionmgr.ques.get(m.quesIndex).getQuestion());
-
+        jLabel10.setText(m.qf.questionmgr.ques.get(n).getQuestion());
+        //System.out.println(m.qf.answermgr.quesIndex);
+        //jLabel10.setText(m.qf.questionmgr.ques.get(m.qf.answermgr.quesIndex).getQuestion());
+        //jLabel10.setText(Integer.toString(m.qf.answermgr.quesIndex));
+        //System.out.println(m.showIndex());
+//        n=m.showIndex();
+//        jLabel10.setText(Integer.toString(n));
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel13.setText("User Deepak737313: You can use Matrix Chain Multiplicatipon or Strassen Algorithm");
+        jLabel13.setText(m.getAnsForQues(n));
 
         /*javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -408,13 +416,20 @@ public class AnswerQuestion extends javax.swing.JFrame {
             jLabel14.setText("Submitted Successfully");
             jLabel14.setForeground(Color.green);
             System.out.println(m.ans.get(m.ans.size()-1).getAnswer());
+            m.qf.notimgr.genAnsNotification((m.qf.notimgr),m.ans.size()-1 );
        
         }
     }
+    public void TextShow(int n){
+        String s=m.qf.questionmgr.ques.get(n).getQuestion();
+        System.out.println(s);
+        this.question=s;
+    }
+    
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //dispmgr.showAnswer();
-        m.qf.dispmgr.showAnswer();
+        m.qf.dispmgr.showAnswer(this.n);
         }
     
     //GEN-LAST:event_jButton1ActionPerformed

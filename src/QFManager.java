@@ -17,10 +17,11 @@ public class QFManager {
     public AnswerManager answermgr;
     public NotificationManager notimgr;
     public DisplayManager dispmgr;
+    public int qs;
     public void showScreen(QFManager qf){
         qf.dispmgr.askaquestion=new AskaQuestion(qf.questionmgr);
-        qf.dispmgr.ansques=new AnswerQuestion(qf.answermgr);
-        qf.dispmgr.reviewans= new ReviewAnswers(qf.answermgr);
+        qf.dispmgr.ansques=new AnswerQuestion(qf.answermgr,0);
+        qf.dispmgr.reviewans= new ReviewAnswers(qf.answermgr,0);
         qf.dispmgr.signup=new SignUp(qf.usermgr);
         qf.dispmgr.login=new Login(qf.usermgr);
         qf.dispmgr.dashboard=new Dashboard(qf.dispmgr);

@@ -13,8 +13,11 @@ public class AnswerManager {
     static int count=0;
     int length=0;
     public int quesIndex;
+    public String q="";
+    //public int quesIndex=0;
     public AnswerManager(){
         ans=new ArrayList<Answers> ();
+        
     }
 
     AnswerManager(QFManager qf) {
@@ -111,6 +114,27 @@ public class AnswerManager {
     }
     public List<Answers>getAnswer(){
         return this.ans;
+    }
+    public int showIndex(){
+        return this.quesIndex;
+    }
+    public void genString(int n){
+        //System.out.println(quesIndex);
+        String s=qf.questionmgr.ques.get(n).getQuestion();
+        System.out.println(s);
+        this.q=s;
+    }
+    public String getAnsForQues(int n){
+        String s="";
+        for(Answers a:ans){
+            if(a.getQId()==n){
+                s+=a.getAnswer()+" \n";
+            }
+        }
+        return s;
+    }
+    public String Text(){
+        return this.q;
     }
 //    public static void main(String[] args){
 //        AnswerManager q=new AnswerManager();

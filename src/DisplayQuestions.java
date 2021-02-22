@@ -157,9 +157,18 @@ public class DisplayQuestions extends javax.swing.JFrame {
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
         // TODO add your handling code here:
         //System.out.println(evt.getLastIndex());
-        System.out.println(jList1.getSelectedIndex());
-        dispmgr.qf.answermgr.quesIndex=jList1.getSelectedIndex()-1;
-        dispmgr.answer();
+        //System.out.println(jList1.getSelectedIndex());
+        //dispmgr.qf.answermgr.quesIndex=jList1.getSelectedIndex()-1;
+        //dispmgr.quesIndex=jList1.getSelectedIndex()-1;
+        int n=jList1.getSelectedIndex()-1;
+        //System.out.println(jList1.getSelectedValue());
+        //System.out.println("Value "+n);
+        //dispmgr.storeIndex(n);
+        //dispmgr.quesIndex=n;
+        dispmgr.answer(n);
+        
+        
+        
     }
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */

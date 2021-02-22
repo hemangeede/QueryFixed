@@ -12,7 +12,7 @@ public class DisplayManager {
 	public Dashboard dashboard;
         public DisplayQuestions dq;
 	public int userLogId;
-        
+        //public int quesIndex;
 	public Notification notification;
 	
     DisplayManager(QFManager qf) {
@@ -42,7 +42,7 @@ public class DisplayManager {
 		reviewans.setVisible(false);
 		signup.setVisible(true);
 	}
-	public void showAnswer()
+	public void showAnswer(int n)
 	{
                 dq.setVisible(false);
 		dashboard.setVisible(false);
@@ -50,6 +50,7 @@ public class DisplayManager {
 		signup.setVisible(false);
 		login.setVisible(false);
 		ansques.setVisible(false);
+                reviewans=new ReviewAnswers(qf.answermgr,n);
 		reviewans.setVisible(true);
 	}
 	public void showAskaQuestion()
@@ -77,7 +78,7 @@ public class DisplayManager {
                 dq.setVisible(true);
 		
 	}
-        public void answer()
+        public void answer(int n)
 	{
 		notification.setVisible(false);
 		signup.setVisible(false);
@@ -85,7 +86,13 @@ public class DisplayManager {
 		reviewans.setVisible(false);
 		dashboard.setVisible(false);
 		askaquestion.setVisible(false);
-                dq.setVisible(true);
+                dq.setVisible(false);
+                qf.answermgr.quesIndex=n;
+                qf.answermgr.genString(n);
+                //qf.qs=n;
+                ansques.TextShow(n);
+                System.out.println(n+" "+qf.answermgr.quesIndex);
+                ansques=new AnswerQuestion(qf.answermgr,n);
 		ansques.setVisible(true);
                 
 		
@@ -116,6 +123,9 @@ public class DisplayManager {
                 System.out.println(qf.notimgr.generatedNoti(userLogId));
 		
 	}
+        public int showIndex(){
+            return this.qf.qs;
+        }
 	
 	
 	

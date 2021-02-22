@@ -94,6 +94,18 @@ public class NotificationManager {
     	}
     	return s;
     }
+        public String getAns(int ad) {
+		String s="";
+    	for(Answers q: qf.answermgr.ans) {
+    		int temp= q.getAId();
+    		if(ad==temp) {
+    			s=q.getAnswer();
+    			//System.out.println(s+" "+temp);
+    			return s;
+    		}
+    	}
+    	return s;
+    }
 	
 	public int getUid(int qd) {
 		int s=-1;
@@ -107,6 +119,30 @@ public class NotificationManager {
     	}
     	return s;
     }
+        public int getAnsUid(int ad) {
+		int s=-1;
+    	for(Answers q: qf.answermgr.ans) {
+    		int temp= q.getAId();
+    		if(ad==temp) {
+    			s=q.getUserId();
+    			//System.out.println(s+" "+temp);
+    			return s;
+    		}
+    	}
+    	return s;
+    }
+        public int getQuesIdOfAns(int aid,int uid){
+            int s=-1;
+    	for(Answers q: qf.answermgr.ans) {
+    		int temp= q.getAId();int t=q.getUserId();
+    		if(aid==temp && uid==t) {
+    			s=q.getQId();
+    			//System.out.println(s+" "+temp);
+    			return s;
+    		}
+    	}
+    	return s;
+        }
         public void  writeCsv(int i)
     {
         //int qId,String answer, int uId, int rId, int aId,int rAnsId
@@ -188,6 +224,17 @@ public class NotificationManager {
 		writeCsv(count-1);
 		return s;
 	}
+        public String genAnsNotification(NotificationManager n, int aid) {
+		String s="";
+		//System.out.println(n.getName(uid));
+		int uid = n.getAnsUid(aid);
+		s=s+ n.getName(uid)+" has given an Answer of the question " +n.getQues(n.getQuesIdOfAns(aid,uid));
+		Notifications n1 = new Notifications(count, s, uid, n.getQuesIdOfAns(aid,uid), aid);
+		notifications.add(n1);
+		count++;
+		writeCsv(count-1);
+		return s;
+	}
 	public void displayNotification() {
 		
 	}
@@ -202,7 +249,7 @@ public class NotificationManager {
 		String[] notiString = new String[notifications.size()];
 		int i=0;
 		for(Notifications n: notifications) {
-			if(n.getUId()==uid) {
+			if(n.getUId()!=uid) {
 				//notiString.add(n.getNotification());
                                 System.out.println("Inserted "+i);
 				notiString[i++] = n.getNotification();

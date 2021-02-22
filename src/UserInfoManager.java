@@ -17,6 +17,15 @@ public class UserInfoManager {
         this.qf=qf;
         user=new ArrayList<User>();
     }
+    public void checkUser(String email){
+        for(int i=0;i<user.size();i++){
+            System.out.println(user.get(i).getEmail());
+            if(user.get(i).getEmail().equals(email)){
+                    //qf.dispmgr.userLogId=user.get(i).getUserId();
+                qf.dispmgr.showLogin();
+            }
+        }
+    }
     public boolean verify(String email,String password){
         //System.out.println(email+" "+password);
         int flag=0;
@@ -123,10 +132,26 @@ public class UserInfoManager {
     
     public void addUser(String uname,String email,String pass){
         //user=new ArrayList<User>();
+        int flag=0;
+        for(int i=0;i<user.size();i++){
+            System.out.println(user.get(i).getEmail());
+            if(user.get(i).getEmail().equals(email)){
+                    //qf.dispmgr.userLogId=user.get(i).getUserId();
+                    flag=1;
+                    break;
+                
+            }
+        }
+        if(flag==0){
         User u=new User(count,uname,email,pass);
         user.add(u);
         count++;
         writeCsv(user.size()-1);
+        qf.dispmgr.showDashboard();
+        }
+        else{
+            qf.dispmgr.showLogin();
+        }
     }
     
     public void addInstUser(String uname,String email,String pass,String iname, String fname, String regno){

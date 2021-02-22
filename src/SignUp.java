@@ -319,10 +319,11 @@ public class SignUp extends javax.swing.JFrame {
                 System.out.println(username);
 	        String email=jTextField2.getText();
 	        String pass=jTextField3.getText();
+                //umgr.checkUser(username,email,pass);
 	        umgr.addUser(username,email,pass);
 	        System.out.println(umgr.getName(umgr.user.size()-1));
 	        System.out.println(umgr.user.size());
-                umgr.qf.dispmgr.showDashboard();
+                //umgr.qf.dispmgr.showDashboard();
         }
         else {
         	String username=jTextField1.getText() ;

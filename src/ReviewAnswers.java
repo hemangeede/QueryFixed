@@ -18,8 +18,10 @@ public class ReviewAnswers extends javax.swing.JFrame {
      * Creates new form ReviewAnswers
      */
 	private AnswerManager var1;
-    public ReviewAnswers(AnswerManager var1) {
+        public int n;
+    public ReviewAnswers(AnswerManager var1,int n) {
     	this.var1=var1;
+        this.n=n;
         initComponents();
         
         
@@ -124,7 +126,7 @@ public class ReviewAnswers extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel9.setText("Your Question");
 
-        jLabel10.setText("What are different event listeners?");
+        jLabel10.setText(var1.qf.questionmgr.ques.get(n).getQuestion());
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel11.setText("Write your Reviewed Answer");

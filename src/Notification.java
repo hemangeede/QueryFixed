@@ -79,12 +79,27 @@ public class Notification extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel2.setText("Notifications");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel3.setText("My Answers");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel4.setText("My Questions");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel5.setText("Home");
@@ -236,6 +251,18 @@ public class Notification extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPanel2.setVisible(true);
         jLabel9.setText("Notifications 1 day ago");
+    }
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	nmgr.qf.dispmgr.showNotification();
+    }
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	nmgr.qf.dispmgr.showNotification();
+    }
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	nmgr.qf.dispmgr.showNotification();
     }
 
     
