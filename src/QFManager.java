@@ -25,6 +25,8 @@ public class QFManager {
         qf.dispmgr.signup=new SignUp(qf.usermgr);
         qf.dispmgr.login=new Login(qf.usermgr);
         qf.dispmgr.dashboard=new Dashboard(qf.dispmgr);
+        qf.dispmgr.myans=new MyAnswer(qf.answermgr);
+        qf.dispmgr.myques=new MyQuestion(qf.questionmgr);
         qf.dispmgr.notification = new Notification(qf.notimgr);
         qf.dispmgr.dq = new DisplayQuestions(qf.dispmgr);
         qf.dispmgr.showLogin();

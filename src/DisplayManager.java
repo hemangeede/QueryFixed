@@ -10,6 +10,8 @@ public class DisplayManager {
 	public SignUp signup;
 	public Login login;
 	public Dashboard dashboard;
+        public MyAnswer myans;
+        public MyQuestion myques;
         public DisplayQuestions dq;
 	public int userLogId;
         //public int quesIndex;
@@ -21,6 +23,8 @@ public class DisplayManager {
     }
 	public void showLogin()
 	{
+                myques.setVisible(false);
+                myans.setVisible(false);
                 dq.setVisible(false);
 		notification.setVisible(false);
 		dashboard.setVisible(false);
@@ -33,6 +37,8 @@ public class DisplayManager {
 	}
 	public void showSignUp()
 	{
+                myques.setVisible(false);
+                myans.setVisible(false);
                 dq.setVisible(false);	
                 notification.setVisible(false);
 		dashboard.setVisible(false);
@@ -44,6 +50,8 @@ public class DisplayManager {
 	}
 	public void showAnswer(int n)
 	{
+                myques.setVisible(false);
+                myans.setVisible(false);
                 dq.setVisible(false);
 		dashboard.setVisible(false);
 		askaquestion.setVisible(false);
@@ -55,6 +63,8 @@ public class DisplayManager {
 	}
 	public void showAskaQuestion()
 	{
+                myques.setVisible(false);
+                myans.setVisible(false);
                 dq.setVisible(false);
 		notification.setVisible(false);
 		signup.setVisible(false);
@@ -68,7 +78,9 @@ public class DisplayManager {
 	}
 	public void answerQuestion()
 	{
-		notification.setVisible(false);
+		myques.setVisible(false);
+                myans.setVisible(false);
+                notification.setVisible(false);
 		signup.setVisible(false);
 		login.setVisible(false);
 		reviewans.setVisible(false);
@@ -80,7 +92,9 @@ public class DisplayManager {
 	}
         public void answer(int n)
 	{
-		notification.setVisible(false);
+		myques.setVisible(false);
+                myans.setVisible(false);
+                notification.setVisible(false);
 		signup.setVisible(false);
 		login.setVisible(false);
 		reviewans.setVisible(false);
@@ -88,9 +102,9 @@ public class DisplayManager {
 		askaquestion.setVisible(false);
                 dq.setVisible(false);
                 qf.answermgr.quesIndex=n;
-                qf.answermgr.genString(n);
+                //qf.answermgr.genString(n);
                 //qf.qs=n;
-                ansques.TextShow(n);
+                //ansques.TextShow(n);
                 System.out.println(n+" "+qf.answermgr.quesIndex);
                 ansques=new AnswerQuestion(qf.answermgr,n);
 		ansques.setVisible(true);
@@ -99,7 +113,9 @@ public class DisplayManager {
 	}
 	public void showDashboard()
 	{
-		dq.setVisible(false);
+		myques.setVisible(false);
+                myans.setVisible(false);
+                dq.setVisible(false);
                 notification.setVisible(false);
 		signup.setVisible(false);
 		login.setVisible(false);
@@ -112,6 +128,8 @@ public class DisplayManager {
 	
 	public void showNotification()
 	{
+                myques.setVisible(false);
+                myans.setVisible(false);
 		dq.setVisible(false);
                 signup.setVisible(false);
 		login.setVisible(false);
@@ -121,6 +139,35 @@ public class DisplayManager {
 		dashboard.setVisible(false);
 		notification.setVisible(true);
                 System.out.println(qf.notimgr.generatedNoti(userLogId));
+		
+	}
+        public void showMyAnswer()
+	{
+		dq.setVisible(false);
+                signup.setVisible(false);
+		login.setVisible(false);
+		reviewans.setVisible(false);
+		askaquestion.setVisible(false);
+		ansques.setVisible(false);
+		dashboard.setVisible(false);
+		notification.setVisible(false);
+                myques.setVisible(false);
+                myans.setVisible(true);
+                
+		
+	}
+        public void showMyQuestion()
+	{
+		dq.setVisible(false);
+                signup.setVisible(false);
+		login.setVisible(false);
+		reviewans.setVisible(false);
+		askaquestion.setVisible(false);
+		ansques.setVisible(false);
+		dashboard.setVisible(false);
+		notification.setVisible(false);
+                myques.setVisible(true);
+                myans.setVisible(false);
 		
 	}
         public int showIndex(){

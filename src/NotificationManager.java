@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 
 
 import javax.swing.JFrame;
@@ -28,7 +29,7 @@ public class NotificationManager {
     			int i, q, qd, ad,ud;
     			while(line != null) {
     				int c=0;
-    				String arr[] = new String[5];
+    				String arr[] = new String[6];
         			
     				StringTokenizer astr = new StringTokenizer(line, ",");
     				while(astr.hasMoreTokens()) {
@@ -39,9 +40,10 @@ public class NotificationManager {
     				
     				ud=Integer.parseInt(arr[2]);
                                 qd=Integer.parseInt(arr[3]);
-                                ad=Integer.parseInt(arr[3]);
+                                ad=Integer.parseInt(arr[4]);
+                                
     				//System.out.println(arr[5]);    q, string, userid, rid, aid, ransid
-    				Notifications u1 = new Notifications(i,arr[1],ud,qd,ad);
+    				Notifications u1 = new Notifications(i,arr[1],ud,qd,ad,arr[5]);
     				notifications.add(u1);
                                 count++;
     				line = br.readLine();
@@ -160,7 +162,8 @@ public class NotificationManager {
             //{
                 //pw.println(an.getQId()+","+an.getAnswer()+","+an.getUserId()+","+an.getRId()
                   //      + ","+an.getAId()+","+an.getrAnsId());
-                 pw.println(notifications.get(i).getnotId()+","+notifications.get(i).getNotification()+"," +notifications.get(i).getUId()+","+notifications.get(i).getQuestionId()+","+notifications.get(i).getAnswerId());
+                 pw.println(notifications.get(i).getnotId()+","+notifications.get(i).getNotification()+"," +notifications.get(i).getUId()+","+notifications.get(i).getQuestionId()+","+notifications.get(i).getAnswerId()+","+notifications.get(i).getDate());
+                System.out.println(notifications.get(i).getDate());
             //}
             pw.flush();
             pw.close();
@@ -213,23 +216,25 @@ public class NotificationManager {
 //	
 	
 	//****Has to look over fetching question from user
-	public String genNotification(NotificationManager n, int qid) {
+	public String genNotification(NotificationManager n, int qid, LocalDate dt) {
 		String s="";
 		//System.out.println(n.getName(uid));
 		int uid = n.getUid(qid);
+                String d=dt.toString();
 		s=s+ n.getName(uid)+" has asked a question " +n.getQues(qid);
-		Notifications n1 = new Notifications(count, s, uid, qid, -1);
+		Notifications n1 = new Notifications(count, s, uid, qid, -1,d);
 		notifications.add(n1);
 		count++;
 		writeCsv(count-1);
 		return s;
 	}
-        public String genAnsNotification(NotificationManager n, int aid) {
+        public String genAnsNotification(NotificationManager n, int aid, LocalDate dt) {
 		String s="";
 		//System.out.println(n.getName(uid));
 		int uid = n.getAnsUid(aid);
+                String d=dt.toString();
 		s=s+ n.getName(uid)+" has given an Answer of the question " +n.getQues(n.getQuesIdOfAns(aid,uid));
-		Notifications n1 = new Notifications(count, s, uid, n.getQuesIdOfAns(aid,uid), aid);
+		Notifications n1 = new Notifications(count, s, uid, n.getQuesIdOfAns(aid,uid), aid,d);
 		notifications.add(n1);
 		count++;
 		writeCsv(count-1);

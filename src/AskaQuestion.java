@@ -63,15 +63,35 @@ public class AskaQuestion extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel1.setText("Home");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel2.setText("My Questions");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel3.setText("My Answers");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel4.setText("Notification");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel5.setText("Logout");
@@ -192,6 +212,22 @@ public class AskaQuestion extends javax.swing.JFrame {
         System.out.println(jTextArea1.getText());
         jLabel10.setText("Submitted Successfully");
     }*/
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showDashboard();
+    }
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showNotification();
+    }
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showMyAnswer();
+    }
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showMyQuestion();
+    }
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                         
         // TODO add your handling code here:
         if((jTextArea1.getText()).equals("")){
@@ -206,7 +242,7 @@ public class AskaQuestion extends javax.swing.JFrame {
             jLabel10.setText("Submitted Successfully");
             jLabel10.setForeground(Color.green);
             System.out.println(mgr.ques.get(mgr.ques.size()-1).getQuestion());
-            mgr.qf.notimgr.genNotification((mgr.qf.notimgr),mgr.ques.size()-1 );
+            mgr.qf.notimgr.genNotification((mgr.qf.notimgr),mgr.ques.size()-1 ,java.time.LocalDate.now());
         }
     }                                        
 

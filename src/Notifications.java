@@ -1,17 +1,24 @@
 
+import java.time.LocalDate;
+
+
 public class Notifications {
 	private int notId=0;
     private String notification="";
     private int userId=0;
     private int questionId=0;
     private int answerId=0;
-    public Notifications(int notId,String notification, int userId, int questionId, int answerId){
+    private String d;
+    private LocalDate dt;
+    public Notifications(int notId,String notification, int userId, int questionId, int answerId, String d){
         this.notId=notId;
         this.notification=notification;
         this.userId=userId;
         this.questionId=questionId;
         this.answerId=answerId;
+        this.d=d;
     }
+    
     public int getnotId(){
         return this.notId;
     }
@@ -31,5 +38,8 @@ public class Notifications {
     	String notiStr = "";
     	
     	return notiStr;
+    }
+    public String getDate(){
+        return d;
     }
 }

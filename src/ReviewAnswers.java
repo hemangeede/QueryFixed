@@ -201,7 +201,7 @@ if((jTextArea1.getText()).equals("")){
         }
         else{
            // System.out.println(jTextArea1.getText());
-            var1.reviewAns(var1.ans.size(),1, jTextArea1.getText(),1,1);
+            var1.reviewAns(var1.ans.size(),var1.qf.dispmgr.userLogId, jTextArea1.getText(),1,1);
             jLabel12.setText("Submitted Successfully");
             jLabel12.setForeground(Color.green);
             //assert(var1.ans.get(var1.ans.size()-1).getAnswer()!=null);

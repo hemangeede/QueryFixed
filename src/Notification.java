@@ -103,6 +103,11 @@ public class Notification extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel5.setText("Home");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         jLabel6.setText("jLabel6");
         ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
@@ -252,17 +257,21 @@ public class Notification extends javax.swing.JFrame {
         jPanel2.setVisible(true);
         jLabel9.setText("Notifications 1 day ago");
     }
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	nmgr.qf.dispmgr.showNotification();
     }
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	nmgr.qf.dispmgr.showNotification();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showNotification();
+    	nmgr.qf.dispmgr.showMyQuestion();
+    }
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	nmgr.qf.dispmgr.showMyAnswer();
     }
 
     

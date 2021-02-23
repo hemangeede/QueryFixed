@@ -112,6 +112,16 @@ public class QuestionManager {
         return s;
         
     }
+    public String[] MyQuestionsDisplay(){
+        String []s=new String[ques.size()];
+        int i=0;
+        for(Questions a:ques){
+            if(a.getUId()==qf.dispmgr.userLogId){
+                s[i++]=a.getQuestion();
+            }
+        }
+        return s;
+    }
     /*public static void main(String[] args){
         QuestionManager q=new QuestionManager();
         q.initialisation("question.csv");

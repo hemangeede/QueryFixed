@@ -115,7 +115,17 @@ public class AnswerManager {
     public List<Answers>getAnswer(){
         return this.ans;
     }
-    public int showIndex(){
+    public String[] MyAnswerDisplay(){
+        String []s=new String[ans.size()];
+        int i=0;
+        for(Answers a:ans){
+            if(a.getUserId()==qf.dispmgr.userLogId){
+                s[i++]=a.getAnswer();
+            }
+        }
+        return s;
+    }
+    /*public int showIndex(){
         return this.quesIndex;
     }
     public void genString(int n){
@@ -123,19 +133,31 @@ public class AnswerManager {
         String s=qf.questionmgr.ques.get(n).getQuestion();
         System.out.println(s);
         this.q=s;
+    }*/
+    public String getName(int ud) {
+		String s="";
+    	for(User u: qf.usermgr.user) {
+    		int temp=u.getUserId();
+    		if(ud==temp) {
+    			s=u.getUserName();
+    			//System.out.println(s+" "+temp);
+    			return u.getUserName();
+    		}
+    	}
+    	return s;
     }
-    public String getAnsForQues(int n){
-        String s="";
+    public String[] getAnsForQues(int n){
+        String[] s=new String[ans.size()];int i=0;
         for(Answers a:ans){
             if(a.getQId()==n){
-                s+=a.getAnswer()+" \n";
+                s[i++]="User "+getName(a.getUserId())+" : "+a.getAnswer()+" \n";
             }
         }
         return s;
     }
-    public String Text(){
+    /*public String Text(){
         return this.q;
-    }
+    }*/
 //    public static void main(String[] args){
 //        AnswerManager q=new AnswerManager();
 //        q.initialisation("answer.csv");
