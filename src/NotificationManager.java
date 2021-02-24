@@ -59,7 +59,7 @@ public class NotificationManager {
     		
     	}
     	catch (FileNotFoundException e) {
-    		System.out.println("File not found");
+    		System.out.println("Notification File not found");
     	}
     	
     	
