@@ -172,6 +172,164 @@ public class NotificationManager {
   System.out.println(E);
 }
     } 
+        public String[] oneDayAgo(){
+            String[] s=new String[notifications.size()];int c=0;
+            String today=(LocalDate.now()).toString();
+            int lenDate=today.length();
+            int date=Integer.parseInt(today.substring(8,lenDate));
+            int month=Integer.parseInt(today.substring(5,7));
+            int year=Integer.parseInt(today.substring(0,4));
+            for(Notifications n:notifications){
+                String d=n.getDate();
+                System.out.println(d);
+                int y=Integer.parseInt(d.substring(6,lenDate));
+                int m=Integer.parseInt(d.substring(3,5));
+                int dVal=Integer.parseInt(d.substring(0,2));
+                if(y==year){
+                    if(month==m){
+                        if(dVal+1==date){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                    else if(m+1==month){
+                        if(date==1 && (dVal==31||dVal==28||dVal==29||dVal==30)){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                }
+                else if(y+1==year){
+                    if(month==1 && m==12){
+                        if(date==1 && dVal==31){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                    }
+                }
+            }
+            }
+            return s;
+        }
+        public String[] oneWeekAgo(){
+            String[] s=new String[notifications.size()];int c=0;
+            String today=(LocalDate.now()).toString();
+            int lenDate=today.length();
+            int date=Integer.parseInt(today.substring(8,lenDate));
+            int month=Integer.parseInt(today.substring(5,7));
+            int year=Integer.parseInt(today.substring(0,4));
+            for(Notifications n:notifications){
+                String d=n.getDate();
+                System.out.println(d);
+                int y=Integer.parseInt(d.substring(6,lenDate));
+                int m=Integer.parseInt(d.substring(3,5));
+                int dVal=Integer.parseInt(d.substring(0,2));
+                if(y==year){
+                    if(month==m){
+                        if(dVal+7<=date){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                    else if(m+1==month){
+                        if(date==1 && (dVal<=24||dVal<=21||dVal<=22||dVal<=23)){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                }
+                else if(y+1==year){
+                    if(month==1 && m==12){
+                        if(date==1 && dVal<=24){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                    }
+                }
+            }
+            }
+            return s;
+        }
+        public String[] twoWeekAgo(){
+            String[] s=new String[notifications.size()];int c=0;
+            String today=(LocalDate.now()).toString();
+            int lenDate=today.length();
+            int date=Integer.parseInt(today.substring(8,lenDate));
+            int month=Integer.parseInt(today.substring(5,7));
+            int year=Integer.parseInt(today.substring(0,4));
+            for(Notifications n:notifications){
+                String d=n.getDate();
+                System.out.println(d);
+                int y=Integer.parseInt(d.substring(6,lenDate));
+                int m=Integer.parseInt(d.substring(3,5));
+                int dVal=Integer.parseInt(d.substring(0,2));
+                if(y==year){
+                    if(month==m){
+                        if(dVal+14<=date){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                    else if(m+1==month){
+                        if(date==1 && (dVal<=17||dVal<=14||dVal<=15||dVal<=16)){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                        }
+                    }
+                }
+                else if(y+1==year){
+                    if(month==1 && m==12){
+                        if(date==1 && dVal<=17){
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			}
+                    }
+                }
+            }
+            }
+            return s;
+        }
+        public String[] oneMonthAgo(){
+            String[] s=new String[notifications.size()];int c=0;
+            String today=(LocalDate.now()).toString();
+            int lenDate=today.length();
+            int date=Integer.parseInt(today.substring(8,lenDate));
+            int month=Integer.parseInt(today.substring(5,7));
+            int year=Integer.parseInt(today.substring(0,4));
+            for(Notifications n:notifications){
+                String d=n.getDate();
+                System.out.println(d);
+                int y=Integer.parseInt(d.substring(6,lenDate));
+                int m=Integer.parseInt(d.substring(3,5));
+                int dVal=Integer.parseInt(d.substring(0,2));
+                if(y==year){
+                    if(m+1==month){
+                        
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			
+                        }
+                    }
+                }
+                else if(y+1==year){
+                    if(month==1 && m==12){
+                        
+                            if(n.getUId()!=qf.dispmgr.userLogId) {
+				s[c++] = n.getNotification();
+			
+                    }
+                }
+            }
+            }
+            return s;
+        }
+
 
 	
 //	public void writeInFile(List<Notifications> noti) {

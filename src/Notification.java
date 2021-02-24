@@ -181,12 +181,25 @@ public class Notification extends javax.swing.JFrame {
         );
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 day ago", "1 week ago", "2 weeks ago", "1 month ago" }));
-
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+        /*jComboBox1.addMouseListener(new java.awt.event.MouseAdapter(){
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBox1MouseClicked(evt);
+            }}
+        );*/
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
+        /*jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "CrazyProgrammer posted a question \"How to improve Dynamic Programming?...\"  9 hours ago", "Kundan26262 posted an answer of \"How to optimise the Matrix Multipli...\"  10 hours ago", "Rahul reviewed your answer of question \"What is Material Management?\"  10 hours ago", "Tua556 posted an answer of \"Why Economics is studied in Engine...\"  10 hours ago", "Sandy007 posted a question \"How to download Tally Counter?\"  13 hours ago", "Ronit335 posted an answer of \"How to optimise the Matrix Multipli...\"  16 hours ago", " " };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
-        });
+        });*/
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i];}});
         jScrollPane2.setViewportView(jList2);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -272,6 +285,86 @@ public class Notification extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	nmgr.qf.dispmgr.showMyAnswer();
+    }
+    /*private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	if(jComboBox1.getSelectedIndex()==0){
+            System.out.println("Notifications of 1 day ago");
+            jLabel9.setText("Notifications of 1 day ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+        else if(jComboBox1.getSelectedIndex()==1){
+            System.out.println("Notifications of 1 week ago");
+            jLabel9.setText("Notifications of 1 week ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+        else if(jComboBox1.getSelectedIndex()==2){
+            System.out.println("Notifications of 2 week ago");
+            jLabel9.setText("Notifications of 2 weeks ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+        else if(jComboBox1.getSelectedIndex()==3){
+            System.out.println("Notifications of 1 month ago");
+            jLabel9.setText("Notifications of 1 month ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+    }*/
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {                                            
+        // TODO add your handling code here:
+        if(evt.getSource()==jComboBox1){
+            if(jComboBox1.getSelectedItem().equals("1 day ago")){
+            System.out.println("Notifications of 1 day ago");
+            jLabel9.setText("Notifications of 1 day ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneDayAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+            if(jComboBox1.getSelectedItem().equals("1 week ago")){
+            System.out.println("Notifications of 1 week ago");
+            jLabel9.setText("Notifications of 1 week ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneWeekAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+            if(jComboBox1.getSelectedItem().equals("2 week ago")){
+            System.out.println("Notifications of 2 week ago");
+            jLabel9.setText("Notifications of 2 week ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.twoWeekAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+            if(jComboBox1.getSelectedItem().equals("1 month ago")){
+            System.out.println("Notifications of 1 month ago");
+            jLabel9.setText("Notifications of 1 month ago");
+            jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = nmgr.oneMonthAgo();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        }
+        }
     }
 
     
