@@ -43,7 +43,7 @@ public class QFManager {
     URI uri = getClass().getClassLoader().getResource("fileLoc").toURI();
     if ("jar".equals(uri.getScheme())) {
       FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
-      return fileSystem.getPath("/fileLoc/");
+      return fileSystem.getPath("fileLoc/");
     } else {
       return Paths.get(uri);
     }
