@@ -69,13 +69,13 @@ public class SignUp extends javax.swing.JFrame {
         jLabel2.setText("QueryFixed");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel3.setText("Home");
+        //jLabel3.setText("Home");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel6.setText("About Us");
+        //jLabel6.setText("About Us");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel7.setText("Contact Us");
+        //jLabel7.setText("Contact Us");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

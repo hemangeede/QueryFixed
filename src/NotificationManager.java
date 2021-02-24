@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 import javax.swing.JFrame;
@@ -378,7 +379,8 @@ public class NotificationManager {
 		String s="";
 		//System.out.println(n.getName(uid));
 		int uid = n.getUid(qid);
-                String d=dt.toString();
+                
+                String d=dt.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 		s=s+ n.getName(uid)+" has asked a question " +n.getQues(qid);
 		Notifications n1 = new Notifications(count, s, uid, qid, -1,d);
 		notifications.add(n1);
@@ -390,7 +392,7 @@ public class NotificationManager {
 		String s="";
 		//System.out.println(n.getName(uid));
 		int uid = n.getAnsUid(aid);
-                String d=dt.toString();
+                String d=dt.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 		s=s+ n.getName(uid)+" has given an Answer of the question " +n.getQues(n.getQuesIdOfAns(aid,uid));
 		Notifications n1 = new Notifications(count, s, uid, n.getQuesIdOfAns(aid,uid), aid,d);
 		notifications.add(n1);
