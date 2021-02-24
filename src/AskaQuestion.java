@@ -243,6 +243,7 @@ public class AskaQuestion extends javax.swing.JFrame {
             jLabel10.setForeground(Color.green);
             System.out.println(mgr.ques.get(mgr.ques.size()-1).getQuestion());
             mgr.qf.notimgr.genNotification((mgr.qf.notimgr),mgr.ques.size()-1 ,java.time.LocalDate.now());
+            mgr.qf.dispmgr.showMyQuestion();
         }
     }                                        
 
