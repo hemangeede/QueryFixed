@@ -78,10 +78,25 @@ public class AnswerQuestion extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(600, 600));
 
         jLabel1.setText("Home");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         jLabel2.setText("My Questions");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setText("Notifications");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setText("Logout");
 
@@ -89,6 +104,11 @@ public class AnswerQuestion extends javax.swing.JFrame {
         jLabel5.setText("QueryFixed");
 
         jLabel6.setText("My Answers");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         jLabel7.setText("jLabel7");
 
@@ -398,6 +418,22 @@ public class AnswerQuestion extends javax.swing.JFrame {
         //dispmgr.showAnswer();
         m.qf.dispmgr.showAnswer(this.n);
         }
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	m.qf.dispmgr.showDashboard();
+    }
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	m.qf.dispmgr.showNotification();
+    }
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	m.qf.dispmgr.showMyAnswer();
+    }
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	m.qf.dispmgr.showMyQuestion();
+    }
 
     /**
      * @param args the command line arguments
