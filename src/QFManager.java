@@ -2,6 +2,7 @@
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -50,14 +51,15 @@ public class QFManager {
   }*/
     public void init(QFManager qf){
         try{
+        //URL u=QFManager.class.getResource("/fileLoc/");
         /*qf.usermgr.initialisation(getFolderPath()+"user.csv");
         qf.questionmgr.initialisation(getFolderPath()+"question.csv");
         qf.answermgr.initialisation(getFolderPath()+"answer.csv");
         qf.notimgr.initialisation(getFolderPath()+"notification.csv");*/
-        qf.usermgr.initialisation("midsem2.jar/fileLoc/user.csv");
-        qf.questionmgr.initialisation("midsem2.jar/fileLoc/question.csv");
-        qf.answermgr.initialisation("midsem2.jar/fileLoc/answer.csv");
-        qf.notimgr.initialisation("midsem2.jar/fileLoc/notification.csv");
+        qf.usermgr.initialisation("user.csv");
+        qf.questionmgr.initialisation("question.csv");
+        qf.answermgr.initialisation("answer.csv");
+        qf.notimgr.initialisation("notification.csv");
         assert(usermgr.user.isEmpty()==false);
         assert(questionmgr.ques.isEmpty()==false);
         assert(answermgr.ans.isEmpty()==false);
