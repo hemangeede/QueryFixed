@@ -32,10 +32,10 @@ public class QFManager {
         qf.dispmgr.showLogin();
     }
     public void init(QFManager qf){
-        qf.usermgr.initialisation("fileLoc/user.csv");
-        qf.questionmgr.initialisation("fileLoc/question.csv");
-        qf.answermgr.initialisation("fileLoc/answer.csv");
-        qf.notimgr.initialisation("fileLoc/notification.csv");
+        qf.usermgr.initialisation("src/fileLoc/user.csv");
+        qf.questionmgr.initialisation("src/fileLoc/question.csv");
+        qf.answermgr.initialisation("src/fileLoc/answer.csv");
+        qf.notimgr.initialisation("src/fileLoc/notification.csv");
         assert(usermgr.user.isEmpty()==false);
         assert(questionmgr.ques.isEmpty()==false);
         assert(answermgr.ans.isEmpty()==false);

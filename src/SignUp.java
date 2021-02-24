@@ -300,7 +300,7 @@ public class SignUp extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
     }                                          
-    ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
+    ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
     /**
      * @param args the command line arguments
      */
