@@ -39,7 +39,7 @@ public class QFManager {
         qf.dispmgr.dq = new DisplayQuestions(qf.dispmgr);
         qf.dispmgr.showLogin();
     }
-    private Path getFolderPath() throws URISyntaxException, IOException {
+    /*private Path getFolderPath() throws URISyntaxException, IOException {
     URI uri = getClass().getClassLoader().getResource("fileLoc").toURI();
     if ("jar".equals(uri.getScheme())) {
       FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
@@ -47,13 +47,17 @@ public class QFManager {
     } else {
       return Paths.get(uri);
     }
-  }
+  }*/
     public void init(QFManager qf){
         try{
-        qf.usermgr.initialisation(getFolderPath()+"user.csv");
+        /*qf.usermgr.initialisation(getFolderPath()+"user.csv");
         qf.questionmgr.initialisation(getFolderPath()+"question.csv");
         qf.answermgr.initialisation(getFolderPath()+"answer.csv");
-        qf.notimgr.initialisation(getFolderPath()+"notification.csv");
+        qf.notimgr.initialisation(getFolderPath()+"notification.csv");*/
+        qf.usermgr.initialisation("midsem2.jar/fileLoc/user.csv");
+        qf.questionmgr.initialisation("midsem2.jar/fileLoc/question.csv");
+        qf.answermgr.initialisation("midsem2.jar/fileLoc/answer.csv");
+        qf.notimgr.initialisation("midsem2.jar/fileLoc/notification.csv");
         assert(usermgr.user.isEmpty()==false);
         assert(questionmgr.ques.isEmpty()==false);
         assert(answermgr.ans.isEmpty()==false);
