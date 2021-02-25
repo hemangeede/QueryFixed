@@ -1,4 +1,13 @@
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collections;
 import javax.swing.JFrame;
 
 /*
@@ -31,7 +40,22 @@ public class QFManager {
         qf.dispmgr.dq = new DisplayQuestions(qf.dispmgr);
         qf.dispmgr.showLogin();
     }
+    /*private Path getFolderPath() throws URISyntaxException, IOException {
+    URI uri = getClass().getClassLoader().getResource("fileLoc").toURI();
+    if ("jar".equals(uri.getScheme())) {
+      FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
+      return fileSystem.getPath("midsem2.jar/fileLoc/");
+    } else {
+      return Paths.get(uri);
+    }
+  }*/
     public void init(QFManager qf){
+        try{
+        //URL u=QFManager.class.getResource("/fileLoc/");
+        /*qf.usermgr.initialisation(getFolderPath()+"user.csv");
+        qf.questionmgr.initialisation(getFolderPath()+"question.csv");
+        qf.answermgr.initialisation(getFolderPath()+"answer.csv");
+        qf.notimgr.initialisation(getFolderPath()+"notification.csv");*/
         qf.usermgr.initialisation("user.csv");
         qf.questionmgr.initialisation("question.csv");
         qf.answermgr.initialisation("answer.csv");
@@ -40,6 +64,10 @@ public class QFManager {
         assert(questionmgr.ques.isEmpty()==false);
         assert(answermgr.ans.isEmpty()==false);
         assert(notimgr.notifications.isEmpty()==false);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
     }
     public static void main(String[] args){
         QFManager qf=new QFManager();

@@ -110,7 +110,7 @@ public class Notification extends javax.swing.JFrame {
         });
 
         jLabel6.setText("jLabel6");
-        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
+        ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
         jLabel6.setIcon(ilogo);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N

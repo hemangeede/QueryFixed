@@ -63,7 +63,7 @@ public class AnswerManager {
    
     }
     catch (FileNotFoundException e) {
-    System.out.println("File not found");
+    System.out.println("Answer File not found");
     }
    
    
@@ -112,9 +112,9 @@ public class AnswerManager {
         count++;
         writeCsv(c);
     }
-    public List<Answers>getAnswer(){
+    /*public List<Answers>getAnswer(){
         return this.ans;
-    }
+    }*/
     public String[] MyAnswerDisplay(){
         String []s=new String[ans.size()];
         int i=0;

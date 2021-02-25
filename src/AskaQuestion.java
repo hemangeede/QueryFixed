@@ -3,7 +3,7 @@ import javax.swing.ImageIcon;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+//import img.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -138,7 +138,7 @@ public class AskaQuestion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
+        ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
         jLabel11.setIcon(ilogo);
 
         jTextArea1.setColumns(20);
@@ -243,6 +243,7 @@ public class AskaQuestion extends javax.swing.JFrame {
             jLabel10.setForeground(Color.green);
             System.out.println(mgr.ques.get(mgr.ques.size()-1).getQuestion());
             mgr.qf.notimgr.genNotification((mgr.qf.notimgr),mgr.ques.size()-1 ,java.time.LocalDate.now());
+            mgr.qf.dispmgr.showMyQuestion();
         }
     }                                        
 

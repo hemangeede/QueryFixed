@@ -137,7 +137,7 @@ public class ReviewAnswers extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18))
         );
-        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
+        ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
         jLabel6.setIcon(ilogo);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N

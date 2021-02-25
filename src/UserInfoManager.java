@@ -97,7 +97,7 @@ public class UserInfoManager {
     		
     	}
     	catch (FileNotFoundException e) {
-    		System.out.println("File not found");
+    		System.out.println(" User File not found");
     	}
     	
     	
