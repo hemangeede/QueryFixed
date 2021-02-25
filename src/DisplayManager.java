@@ -170,9 +170,9 @@ public class DisplayManager {
                 myans.setVisible(false);
 		
 	}
-        public int showIndex(){
+        /*public int showIndex(){
             return this.qf.qs;
-        }
+        }*/
 	
 	
 	

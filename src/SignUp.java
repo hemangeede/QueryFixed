@@ -64,6 +64,8 @@ public class SignUp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("jLabel1");
+        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
+        jLabel1.setIcon(ilogo);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel2.setText("QueryFixed");
@@ -300,7 +302,8 @@ public class SignUp extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
     }                                          
-    ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
+    //ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
+    
     /**
      * @param args the command line arguments
      */

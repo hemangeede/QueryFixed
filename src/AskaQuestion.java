@@ -3,6 +3,8 @@ import javax.swing.ImageIcon;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URI;
+import java.net.URL;
 //import img.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -137,9 +139,10 @@ public class AskaQuestion extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-
-        ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
+        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
         jLabel11.setIcon(ilogo);
+        
+        
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
