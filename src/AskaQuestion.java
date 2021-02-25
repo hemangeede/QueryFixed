@@ -240,7 +240,7 @@ public class AskaQuestion extends javax.swing.JFrame {
         }
         else{
             System.out.println(jTextArea1.getText());
-            mgr.addQuestion(mgr.ques.size(), jTextArea1.getText(),mgr.qf.dispmgr.userLogId);
+            mgr.addQuestion(mgr.ques.size(), jTextArea1.getText(),mgr.qf.userLogId);
             jLabel10.setText("Submitted Successfully");
             jLabel10.setForeground(Color.green);
             System.out.println(mgr.ques.get(mgr.ques.size()-1).getQuestion());

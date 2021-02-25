@@ -119,7 +119,7 @@ public class AnswerManager {
         String []s=new String[ans.size()];
         int i=0;
         for(Answers a:ans){
-            if(a.getUserId()==qf.dispmgr.userLogId){
+            if(a.getUserId()==qf.userLogId){
                 s[i++]=a.getAnswer();
             }
         }

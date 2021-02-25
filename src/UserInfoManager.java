@@ -33,7 +33,7 @@ public class UserInfoManager {
             System.out.println(user.get(i).getEmail()+" "+user.get(i).getPassword());
             if(user.get(i).getEmail().equals(email)){
                 if(user.get(i).getPassword().equals(password)){
-                    qf.dispmgr.userLogId=user.get(i).getUserId();
+                    qf.userLogId=user.get(i).getUserId();
                     //assert(user.get(i).getEmail()==email);
                     flag=1;
                     break;
