@@ -1,3 +1,5 @@
+import javax.swing.ImageIcon;
+
 public class MyQuestion extends javax.swing.JFrame {
 
     /**
@@ -81,7 +83,7 @@ public class MyQuestion extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(102, 102, 102)
@@ -121,6 +123,9 @@ public class MyQuestion extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel9.setText("Your Questions");
+        
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

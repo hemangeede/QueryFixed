@@ -139,9 +139,8 @@ public class AskaQuestion extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        ImageIcon ilogo=new ImageIcon("img/QueryFixedLogo.jpg");
-        jLabel11.setIcon(ilogo);
-        
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
+        jLabel11.setText("jLabel11");
         
 
         jTextArea1.setColumns(20);

@@ -109,10 +109,9 @@ public class Notification extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
-        ImageIcon ilogo=new ImageIcon("src/img/QueryFixedLogo.jpg");
-        jLabel6.setIcon(ilogo);
-
+        
         jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel7.setText("QueryFixed");
 
@@ -121,7 +120,7 @@ public class Notification extends javax.swing.JFrame {
         	jPanel1Layout.createParallelGroup(Alignment.TRAILING)
         		.addGroup(jPanel1Layout.createSequentialGroup()
         			.addGap(19)
-        			.addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+        			.addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addComponent(jLabel7)
         			.addPreferredGap(ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
@@ -272,7 +271,7 @@ public class Notification extends javax.swing.JFrame {
     }
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showNotification();
+    	nmgr.qf.dispmgr.showDashboard();
     }
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
