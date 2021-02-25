@@ -13,7 +13,7 @@ public class DisplayManager {
         public MyAnswer myans;
         public MyQuestion myques;
         public DisplayQuestions dq;
-	public int userLogId;
+	//public int userLogId;
         //public int quesIndex;
 	public Notification notification;
 	
@@ -138,7 +138,7 @@ public class DisplayManager {
 		ansques.setVisible(false);
 		dashboard.setVisible(false);
 		notification.setVisible(true);
-                System.out.println(qf.notimgr.generatedNoti(userLogId));
+                System.out.println(qf.notimgr.generatedNoti(qf.userLogId));
 		
 	}
         public void showMyAnswer()

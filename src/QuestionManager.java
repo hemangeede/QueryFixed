@@ -116,7 +116,7 @@ public class QuestionManager {
         String []s=new String[ques.size()];
         int i=0;
         for(Questions a:ques){
-            if(a.getUId()==qf.dispmgr.userLogId){
+            if(a.getUId()==qf.userLogId){
                 s[i++]=a.getQuestion();
             }
         }
