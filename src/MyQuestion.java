@@ -113,7 +113,8 @@ public class MyQuestion extends javax.swing.JFrame {
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            String[] strings=mgr.MyQuestionsDisplay();
+            String[] strings=mgr.MyQuestionsDisplay(mgr.qf.userLogId);
+            
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });

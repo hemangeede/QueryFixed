@@ -112,11 +112,13 @@ public class QuestionManager {
         return s;
         
     }
-    public String[] MyQuestionsDisplay(){
+    public String[] MyQuestionsDisplay(int n){
         String []s=new String[ques.size()];
         int i=0;
         for(Questions a:ques){
-            if(a.getUId()==qf.userLogId){
+            //int n=qf.userLogId;
+            //System.out.println("User Id"+qf.userLogId);
+            if(a.getUId()==n){
                 s[i++]=a.getQuestion();
             }
         }

@@ -138,7 +138,7 @@ public class DisplayManager {
 		ansques.setVisible(false);
 		dashboard.setVisible(false);
 		notification.setVisible(true);
-                System.out.println(qf.notimgr.generatedNoti(qf.userLogId));
+                //System.out.println(qf.notimgr.generatedNoti(qf.userLogId));
 		
 	}
         public void showMyAnswer()
@@ -153,6 +153,7 @@ public class DisplayManager {
 		notification.setVisible(false);
                 myques.setVisible(false);
                 myans.setVisible(true);
+                qf.answermgr.MyAnswerDisplay();
                 
 		
 	}
@@ -168,6 +169,7 @@ public class DisplayManager {
 		notification.setVisible(false);
                 myques.setVisible(true);
                 myans.setVisible(false);
+                qf.questionmgr.MyQuestionsDisplay(qf.userLogId);
 		
 	}
         /*public int showIndex(){
