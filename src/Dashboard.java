@@ -234,6 +234,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
+        
     	dispmgr.showMyQuestion();
     }
     

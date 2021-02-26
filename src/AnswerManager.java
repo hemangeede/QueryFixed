@@ -97,7 +97,7 @@ public class AnswerManager {
     }
    
      
-    public void addAnswer(int c,int q,String answer,int u){
+    public void addAnswer(int c,int u,String answer,int q){
         Answers a1=new Answers(q,answer,u, 0, c,0);
         ans.add(a1);
         count++;
@@ -115,13 +115,31 @@ public class AnswerManager {
     /*public List<Answers>getAnswer(){
         return this.ans;
     }*/
+    public String getQues(int qd) {
+		String s="";
+    	for(Questions q: qf.questionmgr.ques) {
+    		int temp= q.getQId();
+    		if(qd==temp) {
+    			s=q.getQuestion();
+    			//System.out.println(s+" "+temp);
+    			return s;
+    		}
+    	}
+    	return s;
+    }
     public String[] MyAnswerDisplay(){
         String []s=new String[ans.size()];
         int i=0;
         for(Answers a:ans){
             if(a.getUserId()==qf.userLogId){
-                s[i++]=a.getAnswer();
+                int qid=a.getQId();
+                s[i++]="Question : "+getQues(qid)+"\n"+"Answer : "+a.getAnswer();
             }
+        }
+        for(int j=0;j<i/2;j++){
+            String temp=s[j];
+            s[j]=s[i-1-j];
+            s[i-1-j]=temp;
         }
         return s;
     }
