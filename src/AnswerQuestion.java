@@ -111,7 +111,7 @@ public class AnswerQuestion extends javax.swing.JFrame {
             }
         });
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
-        //jLabel1.setText("jLabel1");
+
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

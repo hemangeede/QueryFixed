@@ -1,5 +1,7 @@
 
+
 import javax.swing.ImageIcon;
+
 
 public class MyQuestion extends javax.swing.JFrame {
 
@@ -37,6 +39,10 @@ public class MyQuestion extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
+        //jLabel1.setText("jLabel1");
+        //jLabel2.setText("jLabel7");
 
         jLabel2.setText("jLabel2");
 
