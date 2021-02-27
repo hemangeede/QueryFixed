@@ -162,7 +162,7 @@ public class MyAnswer extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold> 
-    private void setAnswers(){
+    public void setAnswers(){
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             String[] strings=mgr.MyAnswerDisplay();
