@@ -76,6 +76,11 @@ public class Notification extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel1.setText("Logout");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel2.setText("Notifications");
@@ -285,6 +290,11 @@ public class Notification extends javax.swing.JFrame {
         // TODO add your handling code here:
     	nmgr.qf.dispmgr.showMyAnswer();
     }
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	nmgr.qf.dispmgr.showLogout();
+    }
+    
     /*private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	if(jComboBox1.getSelectedIndex()==0){

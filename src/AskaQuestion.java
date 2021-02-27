@@ -97,6 +97,12 @@ public class AskaQuestion extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel5.setText("Logout");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel7.setText("QueryFixed");
@@ -230,6 +236,11 @@ public class AskaQuestion extends javax.swing.JFrame {
         // TODO add your handling code here:
     	mgr.qf.dispmgr.showMyQuestion();
     }
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showLogout();
+    }
+    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                         
         // TODO add your handling code here:
         if((jTextArea1.getText()).equals("")){

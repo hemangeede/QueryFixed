@@ -346,6 +346,12 @@ public class Login extends javax.swing.JFrame {
        
     }
    
+    
+    public void setPlaceholder() {
+    	jTextField3.setText("Enter Password");
+    	jTextField2.setText("Enter Email I.D");
+    	
+    }
     /**
      * @param args the command line arguments
      */

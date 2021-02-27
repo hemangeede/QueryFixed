@@ -178,6 +178,7 @@ public class DisplayManager {
     	{
             
         	qf.setuserLogId(-1);
+        	login.setPlaceholder();
         	showLogin();
     		//login.setVisible(true);
     		

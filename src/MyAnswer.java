@@ -77,6 +77,11 @@ public class MyAnswer extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel8.setText("Logout");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -185,6 +190,10 @@ public class MyAnswer extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	mgr.qf.dispmgr.showDashboard();
+    }
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	mgr.qf.dispmgr.showLogout();
     }
     /**
      * @param args the command line arguments

@@ -257,7 +257,7 @@ if((jTextArea1.getText()).equals("")){
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	//q.userLogId=-1;
-    	dispmgr.showLogin();
+    	var1.qf.dispmgr.showLogout();
     }
 
    

@@ -91,6 +91,11 @@ public class DisplayQuestions extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel7.setText("Logout");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -195,20 +200,23 @@ public class DisplayQuestions extends javax.swing.JFrame {
     
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showDashboard();
+    	dispmgr.showDashboard();
     }
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showNotification();
+    	dispmgr.showNotification();
     }
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyAnswer();
+    	dispmgr.showMyAnswer();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyQuestion();
+    	dispmgr.showMyQuestion();
     }
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
+		dispmgr.showLogout();
+	}
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
