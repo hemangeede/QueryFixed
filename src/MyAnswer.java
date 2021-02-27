@@ -9,6 +9,7 @@ public class MyAnswer extends javax.swing.JFrame {
     public MyAnswer(AnswerManager mgr) {
         this.mgr=mgr;
         initComponents();
+        setAnswers();
     }
 
     /**
@@ -160,7 +161,15 @@ public class MyAnswer extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold> 
+    private void setAnswers(){
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings=mgr.MyAnswerDisplay();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+    }
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	mgr.qf.dispmgr.showNotification();

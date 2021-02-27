@@ -1,4 +1,5 @@
 
+
 import java.awt.Color;
 
 /*
@@ -110,6 +111,7 @@ public class AnswerQuestion extends javax.swing.JFrame {
             }
         });
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
+
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -118,7 +120,7 @@ public class AnswerQuestion extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
@@ -386,11 +388,12 @@ public class AnswerQuestion extends javax.swing.JFrame {
         }
         else{
             System.out.println(jTextArea1.getText());
-            m.addAnswer(m.ans.size(),m.qf.userLogId, jTextArea1.getText(),1);
+            m.addAnswer(m.ans.size(),m.qf.userLogId, jTextArea1.getText(),n);
             jLabel14.setText("Submitted Successfully");
             jLabel14.setForeground(Color.green);
             System.out.println(m.ans.get(m.ans.size()-1).getAnswer());
             m.qf.notimgr.genAnsNotification((m.qf.notimgr),m.ans.size()-1,java.time.LocalDate.now());
+            m.qf.dispmgr.showMyAnswer();
        
         }
     }                                    
@@ -501,3 +504,4 @@ public class AnswerQuestion extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration                  
 }
+

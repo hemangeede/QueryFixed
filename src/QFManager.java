@@ -26,7 +26,8 @@ public class QFManager {
     public AnswerManager answermgr;
     public NotificationManager notimgr;
     public DisplayManager dispmgr;
-    public int userLogId;
+    public int userLogId=-1;
+    
     public void showScreen(QFManager qf){
         qf.dispmgr.askaquestion=new AskaQuestion(qf.questionmgr);
         qf.dispmgr.ansques=new AnswerQuestion(qf.answermgr,0);
