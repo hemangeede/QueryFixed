@@ -171,13 +171,13 @@ public class DisplayManager {
                 myques=new MyQuestion(qf.questionmgr);
                 myques.setVisible(true);
                 myans.setVisible(false);
-                qf.questionmgr.MyQuestionsDisplay(qf.userLogId);
+                qf.questionmgr.MyQuestionsDisplay(qf.getuserLogId());
 		
 	}
         public void showLogout()
     	{
             
-        	qf.userLogId=-1;
+        	qf.setuserLogId(-1);
         	showLogin();
     		//login.setVisible(true);
     		

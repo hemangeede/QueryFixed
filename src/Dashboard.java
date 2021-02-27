@@ -245,7 +245,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	dispmgr.qf.userLogId=-1;
+    	
     	dispmgr.showLogout();
     }
     

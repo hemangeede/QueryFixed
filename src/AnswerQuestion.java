@@ -388,7 +388,7 @@ public class AnswerQuestion extends javax.swing.JFrame {
         }
         else{
             System.out.println(jTextArea1.getText());
-            m.addAnswer(m.ans.size(),m.qf.userLogId, jTextArea1.getText(),n);
+            m.addAnswer(m.ans.size(),m.qf.getuserLogId(), jTextArea1.getText(),n);
             jLabel14.setText("Submitted Successfully");
             jLabel14.setForeground(Color.green);
             System.out.println(m.ans.get(m.ans.size()-1).getAnswer());

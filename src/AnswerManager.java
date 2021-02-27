@@ -131,7 +131,7 @@ public class AnswerManager {
         String []s=new String[ans.size()];
         int i=0;
         for(Answers a:ans){
-            if(a.getUserId()==qf.userLogId){
+            if(a.getUserId()==qf.getuserLogId()){
                 int qid=a.getQId();
                 s[i++]="Question : "+getQues(qid)+"\n"+"Answer : "+a.getAnswer();
             }

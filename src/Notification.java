@@ -164,7 +164,7 @@ public class Notification extends javax.swing.JFrame {
         	
         
             //String[] strings = { "Neha1609 posted a question \"What are different event listeners?...\"\t  13 mins ago", "Deepak737313 posted an answer of \"How to optimise the Matrix Multipli...\"\t  2 hours ago", "Ruby345 reviewed your answer of question \"What is Material Management?\"\t  4 hours ago", "Hemangee4700 posted an answer of \"Why Economics is studied in Engine...\"\t  9 hours ago" };
-            String[] strings=nmgr.generatedNoti(nmgr.qf.userLogId);
+            String[] strings=nmgr.generatedNoti(nmgr.qf.getuserLogId());
         	public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
 			

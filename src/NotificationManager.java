@@ -189,14 +189,14 @@ public class NotificationManager {
                 if(y==year){
                     if(month==m){
                         if(dVal+1==date){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
                     }
                     else if(m+1==month){
                         if(date==1 && (dVal==31||dVal==28||dVal==29||dVal==30)){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
@@ -205,7 +205,7 @@ public class NotificationManager {
                 else if(y+1==year){
                     if(month==1 && m==12){
                         if(date==1 && dVal==31){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                     }
@@ -230,14 +230,14 @@ public class NotificationManager {
                 if(y==year){
                     if(month==m){
                         if(dVal+7<=date){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
                     }
                     else if(m+1==month){
                         if(date==1 && (dVal<=24||dVal<=21||dVal<=22||dVal<=23)){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
@@ -246,7 +246,7 @@ public class NotificationManager {
                 else if(y+1==year){
                     if(month==1 && m==12){
                         if(date==1 && dVal<=24){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                     }
@@ -271,14 +271,14 @@ public class NotificationManager {
                 if(y==year){
                     if(month==m){
                         if(dVal+14<=date){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
                     }
                     else if(m+1==month){
                         if(date==1 && (dVal<=17||dVal<=14||dVal<=15||dVal<=16)){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                         }
@@ -287,7 +287,7 @@ public class NotificationManager {
                 else if(y+1==year){
                     if(month==1 && m==12){
                         if(date==1 && dVal<=17){
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			}
                     }
@@ -312,7 +312,7 @@ public class NotificationManager {
                 if(y==year){
                     if(m+1==month){
                         
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			
                         }
@@ -321,7 +321,7 @@ public class NotificationManager {
                 else if(y+1==year){
                     if(month==1 && m==12){
                         
-                            if(n.getUId()!=qf.userLogId) {
+                            if(n.getUId()!=qf.getuserLogId()) {
 				s[c++] = n.getNotification();
 			
                     }

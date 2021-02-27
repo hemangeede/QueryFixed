@@ -26,7 +26,7 @@ public class QFManager {
     public AnswerManager answermgr;
     public NotificationManager notimgr;
     public DisplayManager dispmgr;
-    public int userLogId=-1;
+    private int userLogId=-1;
     
     public void showScreen(QFManager qf){
         qf.dispmgr.askaquestion=new AskaQuestion(qf.questionmgr);
@@ -50,6 +50,12 @@ public class QFManager {
       return Paths.get(uri);
     }
   }*/
+    public int getuserLogId(){
+        return this.userLogId;
+    }
+    public void setuserLogId(int id){
+        this.userLogId=id;
+    }
     public void init(QFManager qf){
         try{
         //URL u=QFManager.class.getResource("/fileLoc/");
