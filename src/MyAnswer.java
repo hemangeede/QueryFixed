@@ -83,6 +83,7 @@ public class MyAnswer extends javax.swing.JFrame {
             }
         });
         
+        
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
@@ -167,7 +168,7 @@ public class MyAnswer extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold> 
-    private void setAnswers(){
+    public void setAnswers(){
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             String[] strings=mgr.MyAnswerDisplay();
@@ -245,4 +246,3 @@ public class MyAnswer extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration                  
 }
-

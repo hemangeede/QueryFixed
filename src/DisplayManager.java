@@ -152,7 +152,8 @@ public class DisplayManager {
 		dashboard.setVisible(false);
 		notification.setVisible(false);
                 myques.setVisible(false);
-                myans=new MyAnswer(qf.answermgr);
+                //myans=new MyAnswer(qf.answermgr);
+                myans.setAnswers();
                 myans.setVisible(true);
                 qf.answermgr.MyAnswerDisplay();
                 
@@ -168,7 +169,8 @@ public class DisplayManager {
 		ansques.setVisible(false);
 		dashboard.setVisible(false);
 		notification.setVisible(false);
-                myques=new MyQuestion(qf.questionmgr);
+                //myques=new MyQuestion(qf.questionmgr);
+                myques.setQuestions();
                 myques.setVisible(true);
                 myans.setVisible(false);
                 qf.questionmgr.MyQuestionsDisplay(qf.getuserLogId());
