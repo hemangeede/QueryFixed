@@ -15,6 +15,7 @@ public class Dashboard extends javax.swing.JFrame {
     /**
      * Creates new form Dashboard
      */
+	 //private QFManager q;
 	 private DisplayManager dispmgr;
 	    public Dashboard(DisplayManager dispmgr) {
 	        this.dispmgr=dispmgr;
@@ -87,6 +88,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel7.setText("Logout");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+
         
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/QueryFixedLogo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -235,6 +242,11 @@ public class Dashboard extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	dispmgr.showMyQuestion();
+    }
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	dispmgr.qf.userLogId=-1;
+    	dispmgr.showLogout();
     }
     
     /**

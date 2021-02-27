@@ -64,6 +64,12 @@ public class ReviewAnswers extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
         jLabel1.setText("Logout");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
         jLabel2.setText("Notifications");
@@ -247,6 +253,11 @@ if((jTextArea1.getText()).equals("")){
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	var1.qf.dispmgr.showMyQuestion();
+    }
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+    	//q.userLogId=-1;
+    	dispmgr.showLogin();
     }
 
    

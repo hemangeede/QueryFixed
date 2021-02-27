@@ -23,10 +23,10 @@ public class DisplayManager {
     }
 	public void showLogin()
 	{
-                myques.setVisible(false);
-                myans.setVisible(false);
-                dq.setVisible(false);
-		notification.setVisible(false);
+        myques.setVisible(false);
+        myans.setVisible(false);
+        dq.setVisible(false);
+        notification.setVisible(false);
 		dashboard.setVisible(false);
 		reviewans.setVisible(false);
 		ansques.setVisible(false);
@@ -172,6 +172,14 @@ public class DisplayManager {
                 qf.questionmgr.MyQuestionsDisplay(qf.userLogId);
 		
 	}
+        public void showLogout()
+    	{
+            
+        	qf.userLogId=-1;
+        	showLogin();
+    		//login.setVisible(true);
+    		
+    	}
         /*public int showIndex(){
             return this.qf.qs;
         }*/
