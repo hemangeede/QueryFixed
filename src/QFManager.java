@@ -8,7 +8,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
-import javax.swing.JFrame;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -28,19 +28,19 @@ public class QFManager {
     public DisplayManager dispmgr;
     private int userLogId=-1;
     
-    public void showScreen(QFManager qf){
-        qf.dispmgr.askaquestion=new AskaQuestion(qf.questionmgr);
-        qf.dispmgr.ansques=new AnswerQuestion(qf.answermgr,0);
-        qf.dispmgr.reviewans= new ReviewAnswers(qf.answermgr,0);
-        qf.dispmgr.signup=new SignUp(qf.usermgr);
-        qf.dispmgr.login=new Login(qf.usermgr);
-        qf.dispmgr.dashboard=new Dashboard(qf.dispmgr);
-        qf.dispmgr.myans=new MyAnswer(qf.answermgr);
-        qf.dispmgr.myques=new MyQuestion(qf.questionmgr);
-        qf.dispmgr.notification = new Notification(qf.notimgr);
-        qf.dispmgr.dq = new DisplayQuestions(qf.dispmgr);
-        qf.dispmgr.showLogin();
-    }
+//    public void showScreen(QFManager qf){
+//        qf.dispmgr.askaquestion=new AskaQuestion(qf.questionmgr);
+//        qf.dispmgr.ansques=new AnswerQuestion(qf.answermgr,0);
+//        qf.dispmgr.reviewans= new ReviewAnswers(qf.answermgr,0);
+//        qf.dispmgr.signup=new SignUp(qf.usermgr);
+//        qf.dispmgr.login=new Login(qf.usermgr);
+//        qf.dispmgr.dashboard=new Dashboard(qf.dispmgr);
+//        qf.dispmgr.myans=new MyAnswer(qf.answermgr);
+//        qf.dispmgr.myques=new MyQuestion(qf.questionmgr);
+//        qf.dispmgr.notification = new Notification(qf.notimgr);
+//        qf.dispmgr.dq = new DisplayQuestions(qf.dispmgr);
+//        qf.dispmgr.showLogin();
+//    }
     /*private Path getFolderPath() throws URISyntaxException, IOException {
     URI uri = getClass().getClassLoader().getResource("fileLoc").toURI();
     if ("jar".equals(uri.getScheme())) {
@@ -90,7 +90,7 @@ public class QFManager {
         //Login.setVisible(true);
         //JFrame SignUp=new SignUp(qf.usermgr);
         //SignUp.setVisible(true);
-        qf.showScreen(qf);
+        qf.dispmgr.showScreen();
         
     }
 }

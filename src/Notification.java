@@ -338,7 +338,7 @@ public class Notification extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(evt.getSource()==jComboBox1){
             if(jComboBox1.getSelectedItem().equals("1 day ago")){
-            System.out.println("Notifications of 1 day ago");
+            //System.out.println("Notifications of 1 day ago");
             jLabel9.setText("Notifications of 1 day ago");
             jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = nmgr.oneDayAgo();
@@ -347,7 +347,7 @@ public class Notification extends javax.swing.JFrame {
         });
         }
             if(jComboBox1.getSelectedItem().equals("1 week ago")){
-            System.out.println("Notifications of 1 week ago");
+            //System.out.println("Notifications of 1 week ago");
             jLabel9.setText("Notifications of 1 week ago");
             jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = nmgr.oneWeekAgo();
@@ -356,7 +356,7 @@ public class Notification extends javax.swing.JFrame {
         });
         }
             if(jComboBox1.getSelectedItem().equals("2 week ago")){
-            System.out.println("Notifications of 2 week ago");
+            //System.out.println("Notifications of 2 week ago");
             jLabel9.setText("Notifications of 2 week ago");
             jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = nmgr.twoWeekAgo();
@@ -365,7 +365,7 @@ public class Notification extends javax.swing.JFrame {
         });
         }
             if(jComboBox1.getSelectedItem().equals("1 month ago")){
-            System.out.println("Notifications of 1 month ago");
+            //System.out.println("Notifications of 1 month ago");
             jLabel9.setText("Notifications of 1 month ago");
             jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = nmgr.oneMonthAgo();

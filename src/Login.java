@@ -348,9 +348,14 @@ public class Login extends javax.swing.JFrame {
    
     
     public void setPlaceholder() {
+        
     	jTextField3.setText("Enter Password");
     	jTextField2.setText("Enter Email I.D");
     	
+    }
+    public void showReguser(){
+        jLabel4.setText("Registered User");
+        jLabel4.setForeground(Color.black);
     }
     /**
      * @param args the command line arguments

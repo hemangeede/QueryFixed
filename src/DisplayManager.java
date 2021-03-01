@@ -21,6 +21,19 @@ public class DisplayManager {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         this.qf=qf;
     }
+    public void showScreen(){
+        askaquestion=new AskaQuestion(qf.questionmgr);
+        ansques=new AnswerQuestion(qf.answermgr,0);
+        reviewans= new ReviewAnswers(qf.answermgr,0);
+        signup=new SignUp(qf.usermgr);
+        login=new Login(qf.usermgr);
+        dashboard=new Dashboard(qf.dispmgr);
+        myans=new MyAnswer(qf.answermgr);
+        myques=new MyQuestion(qf.questionmgr);
+        notification = new Notification(qf.notimgr);
+        dq = new DisplayQuestions(qf.dispmgr);
+        showLogin();
+    }
 	public void showLogin()
 	{
         myques.setVisible(false);
@@ -182,6 +195,8 @@ public class DisplayManager {
         	qf.setuserLogId(-1);
         	login.setPlaceholder();
         	showLogin();
+                login.showReguser();
+
     		//login.setVisible(true);
     		
     	}

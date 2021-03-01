@@ -182,7 +182,7 @@ public class NotificationManager {
             int year=Integer.parseInt(today.substring(0,4));
             for(Notifications n:notifications){
                 String d=n.getDate();
-                System.out.println(d);
+                //System.out.println(d);
                 int y=Integer.parseInt(d.substring(6,lenDate));
                 int m=Integer.parseInt(d.substring(3,5));
                 int dVal=Integer.parseInt(d.substring(0,2));
@@ -223,7 +223,7 @@ public class NotificationManager {
             int year=Integer.parseInt(today.substring(0,4));
             for(Notifications n:notifications){
                 String d=n.getDate();
-                System.out.println(d);
+                //System.out.println(d);
                 int y=Integer.parseInt(d.substring(6,lenDate));
                 int m=Integer.parseInt(d.substring(3,5));
                 int dVal=Integer.parseInt(d.substring(0,2));
@@ -264,7 +264,7 @@ public class NotificationManager {
             int year=Integer.parseInt(today.substring(0,4));
             for(Notifications n:notifications){
                 String d=n.getDate();
-                System.out.println(d);
+                //System.out.println(d);
                 int y=Integer.parseInt(d.substring(6,lenDate));
                 int m=Integer.parseInt(d.substring(3,5));
                 int dVal=Integer.parseInt(d.substring(0,2));
@@ -305,7 +305,7 @@ public class NotificationManager {
             int year=Integer.parseInt(today.substring(0,4));
             for(Notifications n:notifications){
                 String d=n.getDate();
-                System.out.println(d);
+                //System.out.println(d);
                 int y=Integer.parseInt(d.substring(6,lenDate));
                 int m=Integer.parseInt(d.substring(3,5));
                 int dVal=Integer.parseInt(d.substring(0,2));
@@ -412,16 +412,31 @@ public class NotificationManager {
             System.out.println(uid);
             System.out.println(notifications.size());
 		String[] notiString = new String[notifications.size()];
-		int i=0;
-		for(Notifications n: notifications) {
-			if(n.getUId()!=uid) {
-				//notiString.add(n.getNotification());
-                                System.out.println("Inserted "+i);
-				notiString[i++] = n.getNotification();
+		
+                int c=0;
+            String today=(LocalDate.now()).toString();
+            int lenDate=today.length();
+            int date=Integer.parseInt(today.substring(8,lenDate));
+            int month=Integer.parseInt(today.substring(5,7));
+            int year=Integer.parseInt(today.substring(0,4));
+            for(Notifications n:notifications){
+                String d=n.getDate();
+                //System.out.println(d);
+                int y=Integer.parseInt(d.substring(6,lenDate));
+                int m=Integer.parseInt(d.substring(3,5));
+                int dVal=Integer.parseInt(d.substring(0,2));
+                if(y==year){
+                    if(month==m){
+                        if(dVal==date){
+                            if(n.getUId()!=uid) {
+				notiString[c++] = n.getNotification();
 			}
-		}
-            for (String notiString1 : notiString) {
-                System.out.println(notiString1);
+                        }
+                    }
+                }
+            }
+            if(notiString.length==0){
+                notiString[0]="No recent notifications";
             }
 	return notiString;
 	}
