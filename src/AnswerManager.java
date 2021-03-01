@@ -106,7 +106,7 @@ public class AnswerManager {
         
        
     }
-    public void reviewAns(int c,int q,String answer,int u,int rAnsId) {
+    public void reviewAns(int c,int u,String answer,int q,int rAnsId) {
     Answers a1=new Answers(q,answer,u, 1, c,rAnsId);
         ans.add(a1);
         count++;

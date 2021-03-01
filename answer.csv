@@ -15,3 +15,8 @@
 14,17,According to test plan check if test cases pass or fail and make the report.,1,0,0
 15,10,We can do using BufferedReader class.,5,0,0
 16,12,In java we can create user interfaces using java swing.,0,0,0
+17,5,Using java.Date package.,1,1,1
+18,5,Using java.Date package.,1,1,1
+19,0,LocalDate.now(),1,1,1
+20,5,Using LocalDate.now(),8,1,1
+21,1,HashMap/ArrayList/Stack/Queue,1,1,1

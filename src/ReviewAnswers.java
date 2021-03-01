@@ -229,11 +229,13 @@ if((jTextArea1.getText()).equals("")){
         }
         else{
            // System.out.println(jTextArea1.getText());
-            var1.reviewAns(var1.ans.size(),var1.qf.getuserLogId(), jTextArea1.getText(),1,1);
+            var1.reviewAns(var1.ans.size(),var1.qf.getuserLogId(), jTextArea1.getText(),n,n);
             jLabel12.setText("Submitted Successfully");
             jLabel12.setForeground(Color.green);
+            var1.qf.notimgr.genAnsNotification((var1.qf.notimgr),var1.ans.size()-1,java.time.LocalDate.now());
+            var1.qf.dispmgr.showMyAnswer();
             //assert(var1.ans.get(var1.ans.size()-1).getAnswer()!=null);
-            System.out.println(var1.ans.get(var1.ans.size()-1).getAnswer());
+            //System.out.println(var1.ans.get(var1.ans.size()-1).getAnswer());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     
