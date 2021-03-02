@@ -21,11 +21,11 @@ import java.util.Collections;
  * @author user
  */
 public class QFManager {
-    public UserInfoManager usermgr;
-    public QuestionManager questionmgr;
-    public AnswerManager answermgr;
-    public NotificationManager notimgr;
-    public DisplayManager dispmgr;
+    private UserInfoManager usermgr;
+    private QuestionManager questionmgr;
+    private AnswerManager answermgr;
+    private NotificationManager notimgr;
+    private DisplayManager dispmgr;
     private int userLogId=-1;
     
 //    public void showScreen(QFManager qf){
@@ -55,6 +55,21 @@ public class QFManager {
     }
     public void setuserLogId(int id){
         this.userLogId=id;
+    }
+    public UserInfoManager getusermgr(){
+        return this.usermgr;
+    }
+    public AnswerManager getanswermgr(){
+        return this.answermgr;
+    }
+    public QuestionManager getquestionmgr(){
+        return this.questionmgr;
+    }
+    public NotificationManager getnotimgr(){
+        return this.notimgr;
+    }
+    public DisplayManager getdispmgr(){
+        return this.dispmgr;
     }
     public void init(QFManager qf){
         try{

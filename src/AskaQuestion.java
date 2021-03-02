@@ -222,23 +222,23 @@ public class AskaQuestion extends javax.swing.JFrame {
     }*/
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showDashboard();
+    	mgr.qf.getdispmgr().showDashboard();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showNotification();
+    	mgr.qf.getdispmgr().showNotification();
     }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyAnswer();
+    	mgr.qf.getdispmgr().showMyAnswer();
     }
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyQuestion();
+    	mgr.qf.getdispmgr().showMyQuestion();
     }
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showLogout();
+    	mgr.qf.getdispmgr().showLogout();
     }
     
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                         
@@ -255,8 +255,8 @@ public class AskaQuestion extends javax.swing.JFrame {
             jLabel10.setText("Submitted Successfully");
             jLabel10.setForeground(Color.green);
             System.out.println(mgr.ques.get(mgr.ques.size()-1).getQuestion());
-            mgr.qf.notimgr.genNotification((mgr.qf.notimgr),mgr.ques.size()-1 ,java.time.LocalDate.now());
-            mgr.qf.dispmgr.showMyQuestion();
+            mgr.qf.getnotimgr().genNotification((mgr.qf.getnotimgr()),mgr.ques.size()-1 ,java.time.LocalDate.now());
+            mgr.qf.getdispmgr().showMyQuestion();
         }
     }                                        
 

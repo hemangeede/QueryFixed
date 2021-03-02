@@ -74,7 +74,7 @@ public class NotificationManager {
 
 	public String getName(int ud) {
 		String s="";
-    	for(User u: qf.usermgr.user) {
+    	for(User u: qf.getusermgr().user) {
     		int temp=u.getUserId();
     		if(ud==temp) {
     			s=u.getUserName();
@@ -87,7 +87,7 @@ public class NotificationManager {
 	
 	public String getQues(int qd) {
 		String s="";
-    	for(Questions q: qf.questionmgr.ques) {
+    	for(Questions q: qf.getquestionmgr().ques) {
     		int temp= q.getQId();
     		if(qd==temp) {
     			s=q.getQuestion();
@@ -99,7 +99,7 @@ public class NotificationManager {
     }
         public String getAns(int ad) {
 		String s="";
-    	for(Answers q: qf.answermgr.ans) {
+    	for(Answers q: qf.getanswermgr().ans) {
     		int temp= q.getAId();
     		if(ad==temp) {
     			s=q.getAnswer();
@@ -112,7 +112,7 @@ public class NotificationManager {
 	
 	public int getUid(int qd) {
 		int s=-1;
-    	for(Questions q: qf.questionmgr.ques) {
+    	for(Questions q: qf.getquestionmgr().ques) {
     		int temp= q.getQId();
     		if(qd==temp) {
     			s=q.getUId();
@@ -124,7 +124,7 @@ public class NotificationManager {
     }
         public int getAnsUid(int ad) {
 		int s=-1;
-    	for(Answers q: qf.answermgr.ans) {
+    	for(Answers q: qf.getanswermgr().ans) {
     		int temp= q.getAId();
     		if(ad==temp) {
     			s=q.getUserId();
@@ -136,7 +136,7 @@ public class NotificationManager {
     }
         public int getQuesIdOfAns(int aid,int uid){
             int s=-1;
-    	for(Answers q: qf.answermgr.ans) {
+    	for(Answers q: qf.getanswermgr().ans) {
     		int temp= q.getAId();int t=q.getUserId();
     		if(aid==temp && uid==t) {
     			s=q.getQId();

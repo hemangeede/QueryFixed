@@ -154,7 +154,7 @@ public class ReviewAnswers extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel9.setText("Your Question");
 
-        jLabel10.setText(var1.qf.questionmgr.ques.get(n).getQuestion());
+        jLabel10.setText(var1.qf.getquestionmgr().ques.get(n).getQuestion());
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel11.setText("Write your Reviewed Answer");
@@ -232,8 +232,8 @@ if((jTextArea1.getText()).equals("")){
             var1.reviewAns(var1.ans.size(),var1.qf.getuserLogId(), jTextArea1.getText(),n,n);
             jLabel12.setText("Submitted Successfully");
             jLabel12.setForeground(Color.green);
-            var1.qf.notimgr.genAnsNotification((var1.qf.notimgr),var1.ans.size()-1,java.time.LocalDate.now());
-            var1.qf.dispmgr.showMyAnswer();
+            var1.qf.getnotimgr().genAnsNotification((var1.qf.getnotimgr()),var1.ans.size()-1,java.time.LocalDate.now());
+            var1.qf.getdispmgr().showMyAnswer();
             //assert(var1.ans.get(var1.ans.size()-1).getAnswer()!=null);
             //System.out.println(var1.ans.get(var1.ans.size()-1).getAnswer());
         }
@@ -242,24 +242,24 @@ if((jTextArea1.getText()).equals("")){
     
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	var1.qf.dispmgr.showDashboard();
+    	var1.qf.getdispmgr().showDashboard();
     }
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	var1.qf.dispmgr.showNotification();
+    	var1.qf.getdispmgr().showNotification();
     }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	var1.qf.dispmgr.showMyAnswer();
+    	var1.qf.getdispmgr().showMyAnswer();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	var1.qf.dispmgr.showMyQuestion();
+    	var1.qf.getdispmgr().showMyQuestion();
     }
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	//q.userLogId=-1;
-    	var1.qf.dispmgr.showLogout();
+    	var1.qf.getdispmgr().showLogout();
     }
 
    

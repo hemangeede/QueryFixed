@@ -22,16 +22,16 @@ public class DisplayManager {
         this.qf=qf;
     }
     public void showScreen(){
-        askaquestion=new AskaQuestion(qf.questionmgr);
-        ansques=new AnswerQuestion(qf.answermgr,0);
-        reviewans= new ReviewAnswers(qf.answermgr,0);
-        signup=new SignUp(qf.usermgr);
-        login=new Login(qf.usermgr);
-        dashboard=new Dashboard(qf.dispmgr);
-        myans=new MyAnswer(qf.answermgr);
-        myques=new MyQuestion(qf.questionmgr);
-        notification = new Notification(qf.notimgr);
-        dq = new DisplayQuestions(qf.dispmgr);
+        askaquestion=new AskaQuestion(qf.getquestionmgr());
+        ansques=new AnswerQuestion(qf.getanswermgr(),0);
+        reviewans= new ReviewAnswers(qf.getanswermgr(),0);
+        signup=new SignUp(qf.getusermgr());
+        login=new Login(qf.getusermgr());
+        dashboard=new Dashboard(qf.getdispmgr());
+        myans=new MyAnswer(qf.getanswermgr());
+        myques=new MyQuestion(qf.getquestionmgr());
+        notification = new Notification(qf.getnotimgr());
+        dq = new DisplayQuestions(qf.getdispmgr());
         showLogin();
     }
 	public void showLogin()
@@ -71,7 +71,7 @@ public class DisplayManager {
 		signup.setVisible(false);
 		login.setVisible(false);
 		ansques.setVisible(false);
-                reviewans=new ReviewAnswers(qf.answermgr,n);
+                reviewans=new ReviewAnswers(qf.getanswermgr(),n);
 		reviewans.setVisible(true);
 	}
 	public void showAskaQuestion()
@@ -114,12 +114,12 @@ public class DisplayManager {
 		dashboard.setVisible(false);
 		askaquestion.setVisible(false);
                 dq.setVisible(false);
-                qf.answermgr.quesIndex=n;
+                qf.getanswermgr().quesIndex=n;
                 //qf.answermgr.genString(n);
                 //qf.qs=n;
                 //ansques.TextShow(n);
-                System.out.println(n+" "+qf.answermgr.quesIndex);
-                ansques=new AnswerQuestion(qf.answermgr,n);
+                System.out.println(n+" "+qf.getanswermgr().quesIndex);
+                ansques=new AnswerQuestion(qf.getanswermgr(),n);
 		ansques.setVisible(true);
                 
 		
@@ -168,7 +168,7 @@ public class DisplayManager {
                 //myans=new MyAnswer(qf.answermgr);
                 myans.setAnswers();
                 myans.setVisible(true);
-                qf.answermgr.MyAnswerDisplay();
+                qf.getanswermgr().MyAnswerDisplay();
                 
 		
 	}
@@ -186,7 +186,7 @@ public class DisplayManager {
                 myques.setQuestions();
                 myques.setVisible(true);
                 myans.setVisible(false);
-                qf.questionmgr.MyQuestionsDisplay(qf.getuserLogId());
+                qf.getquestionmgr().MyQuestionsDisplay(qf.getuserLogId());
 		
 	}
         public void showLogout()

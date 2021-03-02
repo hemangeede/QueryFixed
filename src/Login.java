@@ -341,7 +341,7 @@ public class Login extends javax.swing.JFrame {
    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
    
-       mgr.qf.dispmgr.showSignUp();
+       mgr.qf.getdispmgr().showSignUp();
        
        
     }

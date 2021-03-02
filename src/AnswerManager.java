@@ -117,7 +117,7 @@ public class AnswerManager {
     }*/
     public String getQues(int qd) {
 		String s="";
-    	for(Questions q: qf.questionmgr.ques) {
+    	for(Questions q: qf.getquestionmgr().ques) {
     		int temp= q.getQId();
     		if(qd==temp) {
     			s=q.getQuestion();
@@ -154,7 +154,7 @@ public class AnswerManager {
     }*/
     public String getName(int ud) {
 		String s="";
-    	for(User u: qf.usermgr.user) {
+    	for(User u: qf.getusermgr().user) {
     		int temp=u.getUserId();
     		if(ud==temp) {
     			s=u.getUserName();

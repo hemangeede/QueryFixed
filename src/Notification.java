@@ -276,23 +276,23 @@ public class Notification extends javax.swing.JFrame {
     }
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showDashboard();
+    	nmgr.qf.getdispmgr().showDashboard();
     }
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showNotification();
+    	nmgr.qf.getdispmgr().showNotification();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showMyQuestion();
+    	nmgr.qf.getdispmgr().showMyQuestion();
     }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showMyAnswer();
+    	nmgr.qf.getdispmgr().showMyAnswer();
     }
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	nmgr.qf.dispmgr.showLogout();
+    	nmgr.qf.getdispmgr().showLogout();
     }
     
     /*private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {                                      

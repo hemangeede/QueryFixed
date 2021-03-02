@@ -339,7 +339,7 @@ public class SignUp extends javax.swing.JFrame {
                 
 	        umgr.addInstUser(username,email,pass,inst,fname,regno);
 	        System.out.println(umgr.getName(umgr.user.size()-1));
-                umgr.qf.dispmgr.showDashboard();}
+                umgr.qf.getdispmgr().showDashboard();}
 	        
         }
     }

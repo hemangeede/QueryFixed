@@ -225,7 +225,7 @@ public class AnswerQuestion extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setText(m.qf.questionmgr.ques.get(n).getQuestion());
+        jLabel10.setText(m.qf.getquestionmgr().ques.get(n).getQuestion());
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton3.setText("Review Answer");
@@ -397,8 +397,8 @@ public class AnswerQuestion extends javax.swing.JFrame {
             jLabel14.setText("Submitted Successfully");
             jLabel14.setForeground(Color.green);
             System.out.println(m.ans.get(m.ans.size()-1).getAnswer());
-            m.qf.notimgr.genAnsNotification((m.qf.notimgr),m.ans.size()-1,java.time.LocalDate.now());
-            m.qf.dispmgr.showMyAnswer();
+            m.qf.getnotimgr().genAnsNotification((m.qf.getnotimgr()),m.ans.size()-1,java.time.LocalDate.now());
+            m.qf.getdispmgr().showMyAnswer();
        
         }
     }                                    
@@ -424,29 +424,29 @@ public class AnswerQuestion extends javax.swing.JFrame {
     }
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //dispmgr.showAnswer();
-        m.qf.dispmgr.showAnswer(this.n);
+        m.qf.getdispmgr().showAnswer(this.n);
         }
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	m.qf.dispmgr.showDashboard();
+    	m.qf.getdispmgr().showDashboard();
     }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	m.qf.dispmgr.showNotification();
+    	m.qf.getdispmgr().showNotification();
     }
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	m.qf.dispmgr.showMyAnswer();
+    	m.qf.getdispmgr().showMyAnswer();
     }
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	m.qf.dispmgr.showMyQuestion();
+    	m.qf.getdispmgr().showMyQuestion();
     }
     
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
     	//dispmgr.showLogout();
-    	m.qf.dispmgr.showLogout();
+    	m.qf.getdispmgr().showLogout();
     }
 
     /**

@@ -178,23 +178,23 @@ public class MyAnswer extends javax.swing.JFrame {
     }
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showNotification();
+    	mgr.qf.getdispmgr().showNotification();
     }
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyAnswer();
+    	mgr.qf.getdispmgr().showMyAnswer();
     }
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showMyQuestion();
+    	mgr.qf.getdispmgr().showMyQuestion();
     }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showDashboard();
+    	mgr.qf.getdispmgr().showDashboard();
     }
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {                                      
         // TODO add your handling code here:
-    	mgr.qf.dispmgr.showLogout();
+    	mgr.qf.getdispmgr().showLogout();
     }
     /**
      * @param args the command line arguments

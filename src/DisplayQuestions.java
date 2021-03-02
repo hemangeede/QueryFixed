@@ -135,7 +135,7 @@ public class DisplayQuestions extends javax.swing.JFrame {
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            String[] strings = dispmgr.qf.questionmgr.QuestionString();
+            String[] strings = dispmgr.qf.getquestionmgr().QuestionString();
             
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }

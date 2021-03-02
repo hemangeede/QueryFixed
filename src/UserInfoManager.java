@@ -22,7 +22,7 @@ public class UserInfoManager {
             System.out.println(user.get(i).getEmail());
             if(user.get(i).getEmail().equals(email)){
                     //qf.dispmgr.userLogId=user.get(i).getUserId();
-                qf.dispmgr.showLogin();
+                qf.getdispmgr().showLogin();
             }
         }
     }
@@ -60,7 +60,7 @@ public class UserInfoManager {
 //        user=new ArrayList<User>();
 //    }
     public void displayDashboard(){
-        qf.dispmgr.showDashboard();
+        qf.getdispmgr().showDashboard();
     }
     
     public void initialisation(String fname) {
@@ -148,10 +148,10 @@ public class UserInfoManager {
         user.add(u);
         count++;
         writeCsv(user.size()-1);
-        qf.dispmgr.showDashboard();
+        qf.getdispmgr().showDashboard();
         }
         else{
-            qf.dispmgr.showLogin();
+            qf.getdispmgr().showLogin();
         }
     }
     
