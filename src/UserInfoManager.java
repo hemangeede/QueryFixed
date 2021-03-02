@@ -19,7 +19,7 @@ public class UserInfoManager {
     }
     public void checkUser(String email){
         for(int i=0;i<user.size();i++){
-            System.out.println(user.get(i).getEmail());
+            //System.out.println(user.get(i).getEmail());
             if(user.get(i).getEmail().equals(email)){
                     //qf.dispmgr.userLogId=user.get(i).getUserId();
                 qf.getdispmgr().showLogin();
@@ -30,7 +30,7 @@ public class UserInfoManager {
         //System.out.println(email+" "+password);
         int flag=0;
         for(int i=0;i<user.size();i++){
-            System.out.println(user.get(i).getEmail()+" "+user.get(i).getPassword());
+            //System.out.println(user.get(i).getEmail()+" "+user.get(i).getPassword());
             if(user.get(i).getEmail().equals(email)){
                 if(user.get(i).getPassword().equals(password)){
                     //qf.userLogId=user.get(i).getUserId();
@@ -53,6 +53,53 @@ public class UserInfoManager {
         else {
             return false;
         }
+    }
+    
+    public void print(String fname, String regno, String inst) {
+    	//System.out.println("Email sent");
+    	FileReader reader;
+    	BufferedReader br;
+    	try {
+    		reader= new FileReader("institution.csv");
+    		br = new BufferedReader(reader);
+    		try { 
+    			String line = br.readLine(); 
+    			int i;
+    			while(line != null) {
+    				int c=0;
+    				String arr[] = new String[2];
+        			
+    				StringTokenizer astr = new StringTokenizer(line, ",");
+    				while(astr.hasMoreTokens()) {
+    					arr[c++]=astr.nextToken();
+    				}
+    				c=0;
+    				//i = Integer.parseInt(arr[0]);
+    				//System.out.println(arr[5]);
+    				//User u1 = new User(i, arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]);
+    				//user.add(u1);
+                                //count++;
+    				//System.out.println(inst.compareTo(arr[0]));
+    				if(inst.compareTo(arr[0])==0) {
+    					System.out.println("Your student "+fname+" having registration number: " + regno + " wants to join the application. Please allow this student to interact with platform.");
+    					System.out.println("Email sent to "+ inst);
+    					break;
+    				}
+    				line = br.readLine();
+    			}
+    			
+    			//System.out.println(line);
+    		}
+    		catch (Exception e) {
+    			System.out.println(e.getMessage());
+    		}
+    		
+    		
+    	}
+    	catch (FileNotFoundException e) {
+    		System.out.println(" User File not found");
+    	}
+    	
     }
     
 //    UserInfoManager(QFManager qf){

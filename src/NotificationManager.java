@@ -164,7 +164,7 @@ public class NotificationManager {
                 //pw.println(an.getQId()+","+an.getAnswer()+","+an.getUserId()+","+an.getRId()
                   //      + ","+an.getAId()+","+an.getrAnsId());
                  pw.println(notifications.get(i).getnotId()+","+notifications.get(i).getNotification()+"," +notifications.get(i).getUId()+","+notifications.get(i).getQuestionId()+","+notifications.get(i).getAnswerId()+","+notifications.get(i).getDate());
-                System.out.println(notifications.get(i).getDate());
+                //System.out.println(notifications.get(i).getDate());
             //}
             pw.flush();
             pw.close();
@@ -409,8 +409,8 @@ public class NotificationManager {
     }
 	
 	public String[] generatedNoti(int uid) {
-            System.out.println(uid);
-            System.out.println(notifications.size());
+            //System.out.println(uid);
+            //System.out.println(notifications.size());
 		String[] notiString = new String[notifications.size()];
 		
                 int c=0;

@@ -324,22 +324,23 @@ public class SignUp extends javax.swing.JFrame {
 	        String pass=jTextField3.getText();
                 //umgr.checkUser(username,email,pass);
 	        umgr.addUser(username,email,pass);
-	        System.out.println(umgr.getName(umgr.user.size()-1));
-	        System.out.println(umgr.user.size());
+	        //System.out.println(umgr.getName(umgr.user.size()-1));
+	        //System.out.println(umgr.user.size());
                 //umgr.qf.dispmgr.showDashboard();
         }
         else {
         	String username=jTextField1.getText() ;
 	        String email=jTextField2.getText();
 	        String pass=jTextField3.getText();
-                if(!jComboBox1.getSelectedItem().toString().equals("None")&&!jTextField4.getText().equals("Enter Your Name")&&!jTextField5.getText().equals("Enter Registration No.")){
-	        String inst = jComboBox1.getSelectedItem().toString();
-	        String fname=jTextField4.getText();
-	        String regno =jTextField5.getText();
-                
-	        umgr.addInstUser(username,email,pass,inst,fname,regno);
-	        System.out.println(umgr.getName(umgr.user.size()-1));
-                umgr.qf.getdispmgr().showDashboard();}
+            if(!jComboBox1.getSelectedItem().toString().equals("None")&&!jTextField4.getText().equals("Enter Your Name")&&!jTextField5.getText().equals("Enter Registration No.")){
+		        String inst = jComboBox1.getSelectedItem().toString();
+		        String fname=jTextField4.getText();
+		        String regno =jTextField5.getText();
+	            umgr.print(fname, regno, inst);   
+		        umgr.addInstUser(username,email,pass,inst,fname,regno);
+		        //System.out.println(umgr.getName(umgr.user.size()-1));
+	            umgr.qf.getdispmgr().showDashboard();
+	        }
 	        
         }
     }

@@ -118,7 +118,7 @@ public class DisplayManager {
                 //qf.answermgr.genString(n);
                 //qf.qs=n;
                 //ansques.TextShow(n);
-                System.out.println(n+" "+qf.getanswermgr().quesIndex);
+                //System.out.println(n+" "+qf.getanswermgr().quesIndex);
                 ansques=new AnswerQuestion(qf.getanswermgr(),n);
 		ansques.setVisible(true);
                 

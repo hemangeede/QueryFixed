@@ -322,7 +322,7 @@ public class Login extends javax.swing.JFrame {
         //System.out.println(jTextField3.getText());
         String email=jTextField2.getText();
         String pass=jTextField3.getText();
-        System.out.println(mgr.verify(email,pass));
+        //System.out.println(mgr.verify(email,pass));
         if(mgr.verify(email,pass)==true){
             System.out.println("Logged in");
         //dispmgr.showDashboard();
