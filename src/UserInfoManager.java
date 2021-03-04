@@ -57,7 +57,7 @@ public class UserInfoManager {
             return false;
         }
     }
-    
+    //bug fixed for release 0.2, mailing functionality added
     public void print(String fname, String regno, String inst) {
     	//System.out.println("Email sent");
     	FileReader reader;
