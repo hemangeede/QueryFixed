@@ -151,7 +151,7 @@ public class DisplayManager {
 		ansques.setVisible(false);
 		dashboard.setVisible(false);
 		notification.setVisible(true);
-                //System.out.println(qf.notimgr.generatedNoti(qf.userLogId));
+                //System.out.println(qf.getnotimgr().generatedNoti(qf.getuserLogId()));
 		
 	}
         public void showMyAnswer()

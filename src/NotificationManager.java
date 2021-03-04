@@ -421,6 +421,7 @@ public class NotificationManager {
             int year=Integer.parseInt(today.substring(0,4));
             for(Notifications n:notifications){
                 String d=n.getDate();
+                if(n.getUId()!=qf.getuserLogId()) {
                 //System.out.println(d);
                 int y=Integer.parseInt(d.substring(6,lenDate));
                 int m=Integer.parseInt(d.substring(3,5));
@@ -428,7 +429,8 @@ public class NotificationManager {
                 if(y==year){
                     if(month==m){
                         if(dVal==date){
-                            if(n.getUId()!=uid) {
+                            
+                                //System.out.println("n.getNotification()");
 				notiString[c++] = n.getNotification();
 			}
                         }
