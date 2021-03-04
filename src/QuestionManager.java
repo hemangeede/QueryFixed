@@ -7,7 +7,10 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.*;
 import javax.swing.JFrame;
-
+/**
+ *
+ * @author hemangee
+ */
 public class QuestionManager {
     public QFManager qf;
     public List<Questions> ques;

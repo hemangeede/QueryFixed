@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author user
+ * @author deepak
  */
 public class Dashboard extends javax.swing.JFrame {
 

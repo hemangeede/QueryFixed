@@ -1,5 +1,8 @@
 import javax.swing.ImageIcon;
-
+/**
+ *
+ * @author kundan
+ */
 public class MyAnswer extends javax.swing.JFrame {
 
     /**

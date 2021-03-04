@@ -2,7 +2,10 @@
 import java.util.*;
 import javax.swing.JFrame;
 import java.io.*;
-
+/**
+ *
+ * @author hemangee
+ */
 public class UserInfoManager {
 
     /**

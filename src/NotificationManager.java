@@ -12,6 +12,10 @@ import java.time.format.DateTimeFormatter;
 
 
 import javax.swing.JFrame;
+/**
+ *
+ * @author neha
+ */
 public class NotificationManager {
 	public QFManager qf;
 	//public ArrayList<User> user = new ArrayList<User>();

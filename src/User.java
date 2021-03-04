@@ -6,7 +6,7 @@
 
 /**
  *
- * @author user
+ * @author hemangee
  */
 public class User {
     private int userId=0;

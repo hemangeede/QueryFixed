@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 /**
  *
- * @author hp
+ * @author kundan,neha
  */
 public class SignUp extends javax.swing.JFrame {
 

@@ -1,6 +1,9 @@
 
 import java.util.*;
-
+/**
+ *
+ * @author deepak,kundan
+ */
 public class Answers {
 		private int rAnsId=0;
 		private int qId=0;

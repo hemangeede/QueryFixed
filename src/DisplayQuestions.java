@@ -6,7 +6,7 @@
 
 /**
  *
- * @author user
+ * @author hemangee
  */
 public class DisplayQuestions extends javax.swing.JFrame {
 

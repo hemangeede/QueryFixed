@@ -18,7 +18,7 @@ import java.util.Collections;
 
 /**
  *
- * @author user
+ * @author hemangee,neha
  */
 public class QFManager {
     private UserInfoManager usermgr;

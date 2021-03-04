@@ -14,7 +14,7 @@ import java.net.URL;
 
 /**
  *
- * @author user
+ * @author hemangee
  */
 public class AskaQuestion extends javax.swing.JFrame {
 

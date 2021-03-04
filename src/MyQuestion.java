@@ -1,7 +1,10 @@
 
 
 import javax.swing.ImageIcon;
-
+/**
+ *
+ * @author deepak
+ */
 
 public class MyQuestion extends javax.swing.JFrame {
 

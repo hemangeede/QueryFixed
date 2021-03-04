@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @author hemangee
+ */
 
 public class Questions {
 	private int qId=0;

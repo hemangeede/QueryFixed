@@ -1,7 +1,7 @@
-
-
-
-
+/**
+ *
+ * @author hemangee,neha,deepak,kundan
+ */
 public class DisplayManager {
     public QFManager qf;
 	public AskaQuestion askaquestion;

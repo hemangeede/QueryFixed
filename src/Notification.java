@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
 import java.util.*;
 /**
  *
- * @author user
+ * @author neha
  */
 public class Notification extends javax.swing.JFrame {
 

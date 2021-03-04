@@ -10,7 +10,7 @@ import java.awt.Color;
 
 /**
  *
- * @author hp
+ * @author kundan
  */
 public class AnswerQuestion extends javax.swing.JFrame {
 

@@ -6,7 +6,10 @@ import javax.swing.JFrame;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-
+/**
+ *
+ * @author deepak,kundan
+ */
 public class AnswerManager {
     public QFManager qf;
     public List<Answers> ans;
